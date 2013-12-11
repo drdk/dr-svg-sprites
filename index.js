@@ -115,8 +115,6 @@ module.exports = function (config, callback) {
 		var pngSpritesToBuild = [];
 		var sizeLabel, size;
 		var refSize = (typeof config.refSize == "string") ? config.sizes[config.refSize] : config.refSize;
-		
-		console.log("sprites", JSON.stringify(sprite));
 
 		//_.forOwn(sprites, function (sprite, spriteName) {
 			

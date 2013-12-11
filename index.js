@@ -122,8 +122,6 @@ module.exports = function (config, callback) {
 				var pngPath = config.spritePath + "/" + joinName(config.prefix, spriteName, sizeLabel, "sprite") + ".png";
 				var width = scaleValue(sprite.width, size, refSize);
 				var height = scaleValue(sprite.height, size, refSize);
-				
-				console.log("sprite", JSON.stringify(sprite));
 
 				sprite.sizes[sizeLabel] = {
 					path: pngPath,

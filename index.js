@@ -24,7 +24,9 @@ module.exports = function (config, callback) {
 	var root = path.relative(process.cwd(), config.spriteElementPath);
 	var spriteName = config.name;
 	var suffix = ".svg";
-		
+	if (config.prefix && !("cssPrefix" in config)) {
+		config.cssPrefix = config.prefix;
+	}
 	
 	var spriteElements = fsutil.getFiles(root, suffix).map(function(spriteElement){
 		return root + "/" + spriteElement;
@@ -231,7 +233,7 @@ module.exports = function (config, callback) {
 			spriteUrl: path.relative(config.cssPath, sprite.path).replace(/\\/g, "/")
 		});
 		
-		var cssFileName = config.cssPath + "/" + joinName(config.prefix, config.name, "sprites") + "." + config.cssSuffix;
+		var cssFileName = config.cssPath + "/" + joinName(config.cssPrefix, config.name, "sprites") + "." + config.cssSuffix;
 		var filepath = path.relative(process.cwd(), cssFileName).replace(/\\/g, "/");
 		var pathToFile = filepath.replace(/\/[^\/]+$/, "");
 

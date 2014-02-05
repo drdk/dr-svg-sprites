@@ -28,6 +28,8 @@ module.exports = function (config, callback) {
 		config.cssPrefix = config.prefix;
 	}
 	
+	config.spritePath = config.spritePath.replace(/\\/g, "/").replace(/\/$/, "");
+	
 	var spriteElements = fsutil.getFiles(root, suffix).map(function(spriteElement){
 		return root + "/" + spriteElement;
 	});

@@ -15,7 +15,7 @@ module.exports = function (config, callback) {
 	var phantomjs = require("phantomjs").path;
 	var fs = require("fs");
 	var path = require("path");
-	var exec = require("child_process").exec;
+	var execFile = require("child_process").execFile;
 	var fsutil = require("./lib/fsutil");
 	var svgutil = require("./lib/svgutil");
 	
@@ -151,12 +151,17 @@ module.exports = function (config, callback) {
 		
 	}
 
+	function quotePaths(path) {
+		path
+	}
+
 	function buildPNGSprite (input, output, width, height, callback) {
 
 		var script = path.join(__dirname, "lib/phantomjs-sprite-renderer.js");
-		var args = [phantomjs, script, path.join(process.cwd(), input).replace(/\\/g, "/"), path.join(process.cwd(), output).replace(/\\/g, "/"), width, height].join(" ");
 
-		exec(args, {
+		var args = [script, path.join(process.cwd(), input).replace(/\\/g, "/"), path.join(process.cwd(), output).replace(/\\/g, "/"), width, height];
+
+		execFile(phantomjs, args,  {
 				cwd: __dirname,
 				//timeout: 5000,
 				maxBuffer: 5000*1024 // png data gets quite large

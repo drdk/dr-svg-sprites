@@ -19,11 +19,21 @@ module.exports = function (config, callback) {
 	var fsutil = require("./lib/fsutil");
 	var svgutil = require("./lib/svgutil");
 	
-	var unit = config.unit || 10;
+	// Humble defaults
+	var defaults = {
+		unit: 10,
+		prefix: "",
+		cssSuffix: "css"
+	}
+
+	// Merge defaults with user configuration
+	config = _.assign(defaults, config);
 
 	var root = path.relative(process.cwd(), config.spriteElementPath);
 	var spriteName = config.name;
+	var unit = config.unit;
 	var suffix = ".svg";
+
 	if (config.prefix && !("cssPrefix" in config)) {
 		config.cssPrefix = config.prefix;
 	}

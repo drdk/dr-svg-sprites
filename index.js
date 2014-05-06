@@ -37,13 +37,17 @@ module.exports = function (config, callback) {
 		config.cssPrefix = config.prefix;
 	}
 
-	config.spritePath = config.spritePath.replace(/\\/g, "/").replace(/\/$/, "");
+	if (config.spritePath.slice(-1) == "/") {
+		config.spritePath = config.spritePath.slice(0, -1);
+	}
 
-	var spriteElements = fsutil.getFiles(root, ".svg").map(function(spriteElement){
-		return root + "/" + spriteElement;
+	fsutil.getFiles(root, ".svg", function (files) {
+		var spriteElements = files.map(function(spriteElement){
+				return path.join(root, spriteElement);
+		});
+		spriteElements.sort();
+
+		buildSVGSprite(config, spriteElements, buildPNGSprites);
 	});
-	spriteElements.sort();
-
-	buildSVGSprite(config, spriteElements, buildPNGSprites);
 
 };

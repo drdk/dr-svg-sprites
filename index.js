@@ -20,11 +20,12 @@ module.exports = function (config, callback) {
 	var buildSVG = require("./lib/build-svg");
 	var buildPNG = require("./lib/build-png");
 
-	var glob = path.relative(process.cwd(), config.spriteElementPath) + path.sep + "*.svg";
-	
-	vfs.src(glob).pipe(function build () {
+	var glob = config.spriteElementPath + path.sep + "*.svg";
+	var sprite = new Sprite(config)
 
-		var sprite = new Sprite(config);
+	vfs.src(glob).pipe(build(sprite));
+
+	function build (sprite) {
 
 		return through.obj(function (file, encoding, callback) {
 			
@@ -43,8 +44,8 @@ module.exports = function (config, callback) {
 						buildCSS(sprite, callback);
 					},
 					function (callback) {
-						buildSVG(sprite, function (_callback) {
-							buildPNG(sprite, _callback);
+						buildSVG(sprite, function () {
+							buildPNG(sprite, callback);
 						});
 					},
 				],
@@ -55,6 +56,6 @@ module.exports = function (config, callback) {
 
 		});
 		
-	});
+	}
 
 };

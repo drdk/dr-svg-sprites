@@ -1,0 +1,12 @@
+{{#sizes}}{{#items}}{{className}} {
+	width: {{unit width}};
+	height: {{unit height}};
+	background-position: {{unit x}} {{unit y}};
+}{{/items}}
+{{optOut items}} {
+	background-image: url("{{url pngPath}}");
+	background-size: {{unit width}} {{unit height}};
+}{{/sizes}}
+{{optInAll sizes}} {
+	background-image: url("{{url svgPath}}");
+}

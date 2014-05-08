@@ -2,7 +2,7 @@
  * dr-svg-sprites
  *
  *
- * Copyright (c) 2013 drdk
+ * Copyright (c) 2014 drdk
  * Licensed under the MIT license.
  */
 
@@ -10,44 +10,51 @@
 
 module.exports = function (config, callback) {
 
-	var _ = require("lodash");
 	var path = require("path");
-	var fsutil = require("./lib/fsutil");
+	var async = require("async");
+	var vfs = require("vinyl-fs");
+	var through = require("through2");
+	var svgutil = require("./lib/svgutil");
+	var Sprite = require("./lib/sprite");
 	var buildCSS = require("./lib/build-css");
-	var buildSVGSprite = require("./lib/build-svg");
-	var buildPNGSprites = require("./lib/build-png");
+	var buildSVG = require("./lib/build-svg");
+	var buildPNG = require("./lib/build-png");
 
-	// Humble defaults
-	var defaults = {
-		unit: 10,
-		prefix: "",
-		cssSuffix: "css",
-		units: "px"
-	}
+	var glob = path.relative(process.cwd(), config.spriteElementPath) + path.sep + "*.svg";
+	
+	vfs.src(glob).pipe(function build () {
 
-	// Merge defaults with user configuration
-	config = _.assign(defaults, config);
-	if (typeof callback == "function") {
-		config.callback = callback;
-	}
+		var sprite = new Sprite(config);
 
-	var root = path.relative(process.cwd(), config.spriteElementPath);
+		return through.obj(function (file, encoding, callback) {
+			
+			svgutil.parse(file.contents.toString(), function (err, data) {
+				sprite.addItem(file.path, data.source, data.width, data.height);
+				callback(null);
+			});
+			
+		}, function () {
+			
+			sprite.prepare();
 
-	if (config.prefix && !("cssPrefix" in config)) {
-		config.cssPrefix = config.prefix;
-	}
+			async.parallel(
+				[
+					function (callback) {
+						buildCSS(sprite, callback);
+					},
+					function (callback) {
+						buildSVG(sprite, function (_callback) {
+							buildPNG(sprite, _callback);
+						});
+					},
+				],
+				function () {
+					callback(null);
+				}
+			);
 
-	if (config.spritePath.slice(-1) == "/") {
-		config.spritePath = config.spritePath.slice(0, -1);
-	}
-
-	fsutil.getFiles(root, ".svg", function (files) {
-		var spriteElements = files.map(function(spriteElement){
-				return path.join(root, spriteElement);
 		});
-		spriteElements.sort();
-
-		buildSVGSprite(config, spriteElements, buildPNGSprites);
+		
 	});
 
 };

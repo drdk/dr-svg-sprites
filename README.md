@@ -162,10 +162,8 @@ Templates have e few internal helpers at their disposal:
 
 - `url`: Takes a path (`String`) and returns a CSS appropriate path.
 - `unit`: Adds units to a value (`Number`) if needed and also converts from `px` to `rem`.
-- `svgPrefix`: Accepts an array of items (`Sprite.sizes[].items`). Returns a comma separated selector with svg prefix for all elements in a size.
-- `svgPrefixAll`: Accepts an array of sizes (`Sprite.sizes`). Returns a comma separated selector with svg prefix for all elements for all sizes.
-- `pngPrefix`: Accepts an array of items (`Sprite.sizes[].items`). Returns a comma separated selector with png prefix for all elements in a size.
-- `pngPrefixAll`: Accepts an array of sizes (`Sprite.sizes`). Returns a comma separated selector with png prefix for all elements for all sizes.
+- `prefix`: Accepts an array of items (`Sprite.sizes[].items`) and a selector prefix (`String`). Returns a comma separated prefixed selector for all elements in a size.
+- `prefixAll`: Accepts an array of sizes (`Sprite.sizes`) and a selector prefix (`String`). Returns a comma separated prefixed selector for all elements for all sizes.
 
 
 ##### options.layout

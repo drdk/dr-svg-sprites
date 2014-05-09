@@ -3,10 +3,10 @@
 	height: {{unit height}};
 	background-position: {{unit x -1}} {{unit y -1}};
 }
-{{/items}}{{pngPrefix items}} {
+{{/items}}{{prefix items ../config/cssPngPrefix}} {
 	background-image: url("{{url pngPath}}");
 	background-size: {{unit width}} {{unit height}};
 }
-{{/sizes}}{{svgPrefixAll sizes}} {
+{{/sizes}}{{prefixAll sizes config/cssSvgPrefix}} {
 	background-image: url("{{url svgPath}}");
 }

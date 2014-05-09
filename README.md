@@ -11,7 +11,7 @@ var builder = require("dr-svg-sprites");
 var options = {
 	spriteElementPath: "img/logos",
 	spritePath: "img/sprites/logo-sprite.svg",
-	cssPath: "css/logo-sprite.less"
+	cssPath: "css/logo-sprite.css"
 };
 builder(options, function () {
 	// sprite was built
@@ -20,7 +20,7 @@ builder(options, function () {
 ```
 
 would yield the following files:
-- `css/logo-sprite.less`
+- `css/logo-sprite.css`
 - `img/sprites/logo-sprite.svg`
 - `img/sprites/logo-sprite.png`
 
@@ -117,14 +117,14 @@ Type: `String`
 Default value: `".svg"`
 Optional
 
-Defines a prefix for selectors that target svg sprites. 
+Defines a prefix for selectors to target svg sprites. 
 
 #### options.cssPngPrefix
 Type: `String`
 Default value: `""`
 Optional
 
-Defines a prefix for selectors that target png sprites. 
+Defines a prefix for selectors to target png sprites. 
 
 
 #### options.cssUnit
@@ -140,7 +140,7 @@ Type: `String`
 Default value: `16`
 Optional
 
-Used to calculate values when using `options.cssUnit` is set to `"rem"`.
+Used to calculate values when using `options.cssUnit` set to `"rem"`.
 
 #### options.cssIncludeElementSizes
 Type: `Boolean`

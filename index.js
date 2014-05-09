@@ -33,12 +33,18 @@ module.exports = function (config, callback) {
 				callback(null);
 			});
 		}, function () {
+
 			sprite.prepare();
 
 			async.parallel(
 				[
 					function (callback) {
-						buildCSS(sprite, callback);
+						if (sprite.cssPath) {
+							buildCSS(sprite, callback);
+						}
+						else {
+							callback(null);
+						}
 					},
 					function (callback) {
 						buildSVG(sprite, function () {

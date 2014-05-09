@@ -53,7 +53,9 @@ module.exports = function (config, callback) {
 					},
 				],
 				function () {
-					callback(null);
+					if (typeof callback == "function") {
+						callback(null);
+					}
 				}
 			);
 			

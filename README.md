@@ -2,14 +2,65 @@
 
 > Create SVG sprites with PNG fallbacks at needed sizes
 
+### Usage
+
+Minimal:
+
+```
+var builder = require("dr-svg-sprites");
+var options = {
+	spriteElementPath: "img/logos",
+	spritePath: "img/sprites/logo-sprite.svg",
+	cssPath: "css/logo-sprite.less"
+};
+builder(options, function () {
+	// sprite was built
+});
+
+```
+
+would yield the following files:
+- `css/logo-sprite.less`
+- `img/sprites/logo-sprite.svg`
+- `img/sprites/logo-sprite.png`
+
+Advanced:
+
+```
+var builder = require("dr-svg-sprites");
+var options = {
+	name: "tv",
+	prefix: "dr-logos",
+	spriteElementPath: "img/logos/tv",
+	spritePath: "img/sprites",
+	layout: "packed",
+	cssPath: "css",
+	cssSuffix: "less",
+	cssUnit: "rem",
+	sizes: {
+		large: 24,
+		small: 16
+	},
+	refSize: "large"
+};
+builder(options, function () {
+	// sprite was built
+});
+
+```
+
+would yield the following files:
+- `css/dr-logos-tv-sprite.less`
+- `img/sprites/dr-logos-tv-sprite.svg`
+- `img/sprites/dr-logos-tv-sprite-large.png`
+- `img/sprites/dr-logos-tv-sprite-small.png`
+
 
 ### Options
 
 ##### options.name
 Type: `String`
 Optional
-
-
 
 Used when automatically building stylesheet and image filenames.
 
@@ -23,7 +74,7 @@ Type: `String`
 
 Destination path of the generated sprite images.
 
-If the filename part (ending in `.svg`) is omited it will be built from `options.prefix`, `options.name` and  `"sprite"`.
+If the filename part (ending in `.svg`) is omitted it will be built from `options.prefix`, `options.name` and  `"sprite"`.
 
 
 ##### options.cssPath
@@ -32,7 +83,7 @@ Optional
 
 Destination path of the generated stylesheet.
 
-If a filename part is omited it will get built from `options.cssPrefix`, `options.name`, `"sprite"` and `options.cssSuffix`.
+If a filename part is omitted it will get built from `options.cssPrefix`, `options.name`, `"sprite"` and `options.cssSuffix`.
 
 If left blank only svg sprites and png fallbacks are generated.
 			
@@ -61,37 +112,61 @@ Stylesheet filetype suffix.
 
 Only used when automatically building stylesheet filenames.
 
-#### options.map
-Type: `Object|Function`
-Default value: `null`
-Optional
-
-Can be used to translate svg element basenames (filename without extension) into desired names. Handy if the basenames don't make good classnames (or contain invalid chars).
-
-If an object is supplied it will be used as a lookup table.
-
-If a function is supplied it will be used to transform the svg element basename.
-
-#### options.svgSelector
+#### options.cssSvgPrefix
 Type: `String`
 Default value: `".svg"`
 Optional
 
-Defines a selector to prepend selectors that target svg sprites. 
+Defines a prefix for selectors that target svg sprites. 
 
-#### options.pngSelector
+#### options.cssPngPrefix
 Type: `String`
 Default value: `""`
 Optional
 
-Defines a selector to prepend selectors that target png sprites. 
+Defines a prefix for selectors that target png sprites. 
 
-#### options.includeElementSizes
+
+#### options.cssUnit
+Type: `String`
+Default value: `"px"`
+Optional
+
+Defines the unit used for dimensions and positions in the stylesheet.
+Only other unit that is supported (in a meaningful way) is `"rem"` - which is used in combination with `options.cssBaseFontSize`.
+
+#### options.cssBaseFontSize
+Type: `String`
+Default value: `16`
+Optional
+
+Used to calculate values when using `options.cssUnit` is set to `"rem"`.
+
+#### options.cssIncludeElementSizes
 Type: `Boolean`
 Default value: `true`
 Optional
 
-If set to `false` `width` and `height` for the svg elements will be omited in the stylesheet. Useful in combination with a `options.layout` of `"diagonal"`.
+If set to `false` `width` and `height` for the svg elements will be omitted in the stylesheet. Useful in combination with a `options.layout` of `"diagonal"`.
+
+#### options.template
+Type: `String`
+Default value: `"../templates/stylesheet.hbs"`
+Optional
+
+Defines the path of the Handlebars template to use for generating the stylesheet.
+
+The data object passed to the Handlebars template is a `Sprite` instance (see `./lib/Sprite.js`).
+
+Templates have e few internal helpers at their disposal:
+
+- `url`: Takes a path (`String`) and returns a CSS appropriate path.
+- `unit`: Adds units to a value (`Number`) if needed and also converts from `px` to `rem`.
+- `svgPrefix`: Accepts an array of items (`Sprite.sizes[].items`). Returns a comma separated selector with svg prefix for all elements in a size.
+- `svgPrefixAll`: Accepts an array of sizes (`Sprite.sizes`). Returns a comma separated selector with svg prefix for all elements for all sizes.
+- `pngPrefix`: Accepts an array of items (`Sprite.sizes[].items`). Returns a comma separated selector with png prefix for all elements in a size.
+- `pngPrefixAll`: Accepts an array of sizes (`Sprite.sizes`). Returns a comma separated selector with png prefix for all elements for all sizes.
+
 
 #### options.layout
 Type: `String`
@@ -105,27 +180,22 @@ Defines the layout of elements in the sprite. Possible values:
 - `"diagonal"`: Elements are distributed from top-left to bottom-right corner.
 - `"alt-diagonal"`: Same as above but inverse direction.
 
+#### options.map
+Type: `Object|Function`
+Default value: `null`
+Optional
+
+Can be used to translate svg element basenames (filename without extension) into desired names. Handy if the basenames don't make good classnames (or contain invalid chars).
+
+If an object is supplied it will be used as a lookup table.
+
+If a function is supplied it will be used to transform the svg element basename.
+
 #### options.unit
 Type: `Number`
 Default value: `10`
 
 Defines unit size of the grid the sprite elements snap to.
-
-
-#### options.lengthUnit
-Type: `String`
-Default value: `"px"`
-Optional
-
-Defines the unit used for dimensions and positions in the stylesheet.
-Only other unit that is supported (in a meaningful way) is `"rem"` - which is used in combination with `options.baseFontSize`.
-
-#### options.baseFontSize
-Type: `String`
-Default value: `16`
-Optional
-
-Used to calculate values when using `options.lengthUnit` is set to `"rem"`.
 
 #### options.refSize
 Type: `String|Number`
@@ -150,6 +220,7 @@ A hash of size labels and values (`Number`) that define the different sizes of t
 			large: 39,
 			small: 13
 		},
+		refSize: "large",
 		// more options
 	};
 ```

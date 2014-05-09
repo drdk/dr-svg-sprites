@@ -3,10 +3,10 @@
 	height: {{unit height}};
 	background-position: {{unit x -1}} {{unit y -1}};
 }
-{{/items}}{{pngSelector items}} {
+{{/items}}{{pngPrefix items}} {
 	background-image: url("{{url pngPath}}");
 	background-size: {{unit width}} {{unit height}};
 }
-{{/sizes}}{{svgSelectorAll sizes}} {
+{{/sizes}}{{svgPrefixAll sizes}} {
 	background-image: url("{{url svgPath}}");
 }

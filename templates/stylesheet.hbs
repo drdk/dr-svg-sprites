@@ -1,12 +1,27 @@
-{{#sizes}}{{#items}}{{className}} {
+{{#sizes}}
+{{#items}}
+{{className}} {
+{{#if ../../config/cssIncludeElementSizes}}
 	width: {{unit width}};
 	height: {{unit height}};
+{{/if}}
 	background-position: {{unit x -1}} {{unit y -1}};
 }
-{{/items}}{{prefix items ../config/cssPngPrefix}} {
+{{/items}}
+{{#if ../config/cssPngPrefix}}
+{{prefix items ""}} {
+	background-size: {{unit width}} {{unit height}};
+}
+{{prefix items ../../config/cssPngPrefix}} {
+	background-image: url("{{url pngPath}}");
+}
+{{else}}
+{{prefix items ""}} {
 	background-image: url("{{url pngPath}}");
 	background-size: {{unit width}} {{unit height}};
 }
-{{/sizes}}{{prefixAll sizes config/cssSvgPrefix}} {
+{{/if}}
+{{/sizes}}
+{{prefixAll sizes config/cssSvgPrefix}} {
 	background-image: url("{{url svgPath}}");
 }

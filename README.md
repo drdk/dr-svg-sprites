@@ -76,6 +76,16 @@ Destination path of the generated sprite images.
 
 If the filename part (ending in `.svg`) is omitted it will be built from `options.prefix`, `options.name` and  `"sprite"`.
 
+##### options.previewPath
+Type: `String`
+Default value: `""`
+Optional
+
+The path where to built a preview page. 
+
+If the filename part (ending in `.html`) is omitted it will be built from `options.prefix`, `options.name` and  `"sprite"`.
+
+Default is no preview.
 
 ##### options.cssPath
 Type: `String`
@@ -147,7 +157,7 @@ Type: `Boolean`
 Default value: `true`
 Optional
 
-If set to `false` `width` and `height` for the svg elements will be omitted in the stylesheet. Useful in combination with a `options.layout` of `"diagonal"`.
+If set to `false` `width` and `height` for the svg elements will be omitted in the stylesheet. Useful in combination with a `options.layout` of `"alt-diagonal"`.
 
 ##### options.template
 Type: `String`

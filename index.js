@@ -19,6 +19,7 @@ module.exports = function (config, callback) {
 	var buildCSS = require("./lib/build-css");
 	var buildSVG = require("./lib/build-svg");
 	var buildPNG = require("./lib/build-png");
+	var buildPreview = require("./lib/build-preview");
 
 	var glob = config.spriteElementPath + path.sep + "*.svg";
 	var sprite = new Sprite(config)
@@ -36,22 +37,28 @@ module.exports = function (config, callback) {
 
 			sprite.prepare();
 
+			var tasks = [
+				function (callback) {
+					buildSVG(sprite, function () {
+						buildPNG(sprite, callback);
+					});
+				}
+			];
+			
+			if (sprite.cssPath) {
+				tasks.push(function (callback) {
+					buildCSS(sprite, callback);
+				});
+			}
+			
+			if (sprite.previewPath) {
+				tasks.push(function (callback) {
+					buildPreview(sprite, callback);
+				});
+			}
+
 			async.parallel(
-				[
-					function (callback) {
-						if (sprite.cssPath) {
-							buildCSS(sprite, callback);
-						}
-						else {
-							callback(null);
-						}
-					},
-					function (callback) {
-						buildSVG(sprite, function () {
-							buildPNG(sprite, callback);
-						});
-					},
-				],
+				tasks,
 				function () {
 					if (typeof callback == "function") {
 						callback(null);

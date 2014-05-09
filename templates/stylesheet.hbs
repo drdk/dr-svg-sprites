@@ -3,10 +3,10 @@
 	height: {{unit height}};
 	background-position: {{unit x -1}} {{unit y -1}};
 }
-{{/items}}{{optOut items}} {
+{{/items}}{{pngSelector items}} {
 	background-image: url("{{url pngPath}}");
 	background-size: {{unit width}} {{unit height}};
 }
-{{/sizes}}{{optInAll sizes}} {
+{{/sizes}}{{svgSelectorAll sizes}} {
 	background-image: url("{{url svgPath}}");
 }

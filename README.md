@@ -94,7 +94,7 @@ Optional
 
 Defines a prefix for the name of the sprite stylesheet, images and classnames.
 
-#### options.cssPrefix
+##### options.cssPrefix
 Type: `String`
 Default value: `""`
 Optional
@@ -103,7 +103,7 @@ Defines a prefix for the name of the sprite stylesheet (this overrides `options.
 
 Only used when automatically building stylesheet filenames.
 
-#### options.cssSuffix
+##### options.cssSuffix
 Type: `String`
 Default value: `"css"`
 Optional
@@ -112,14 +112,14 @@ Stylesheet filetype suffix.
 
 Only used when automatically building stylesheet filenames.
 
-#### options.cssSvgPrefix
+##### options.cssSvgPrefix
 Type: `String`
 Default value: `".svg"`
 Optional
 
 Defines a prefix for selectors to target svg sprites. 
 
-#### options.cssPngPrefix
+##### options.cssPngPrefix
 Type: `String`
 Default value: `""`
 Optional
@@ -127,7 +127,7 @@ Optional
 Defines a prefix for selectors to target png sprites. 
 
 
-#### options.cssUnit
+##### options.cssUnit
 Type: `String`
 Default value: `"px"`
 Optional
@@ -135,21 +135,21 @@ Optional
 Defines the unit used for dimensions and positions in the stylesheet.
 Only other unit that is supported (in a meaningful way) is `"rem"` - which is used in combination with `options.cssBaseFontSize`.
 
-#### options.cssBaseFontSize
+##### options.cssBaseFontSize
 Type: `String`
 Default value: `16`
 Optional
 
 Used to calculate values when using `options.cssUnit` set to `"rem"`.
 
-#### options.cssIncludeElementSizes
+##### options.cssIncludeElementSizes
 Type: `Boolean`
 Default value: `true`
 Optional
 
 If set to `false` `width` and `height` for the svg elements will be omitted in the stylesheet. Useful in combination with a `options.layout` of `"diagonal"`.
 
-#### options.template
+##### options.template
 Type: `String`
 Default value: `"../templates/stylesheet.hbs"`
 Optional
@@ -168,7 +168,7 @@ Templates have e few internal helpers at their disposal:
 - `pngPrefixAll`: Accepts an array of sizes (`Sprite.sizes`). Returns a comma separated selector with png prefix for all elements for all sizes.
 
 
-#### options.layout
+##### options.layout
 Type: `String`
 Default value: `"horizontal"`
 Optional
@@ -180,7 +180,7 @@ Defines the layout of elements in the sprite. Possible values:
 - `"diagonal"`: Elements are distributed from top-left to bottom-right corner.
 - `"alt-diagonal"`: Same as above but inverse direction.
 
-#### options.map
+##### options.map
 Type: `Object|Function`
 Default value: `null`
 Optional
@@ -191,13 +191,13 @@ If an object is supplied it will be used as a lookup table.
 
 If a function is supplied it will be used to transform the svg element basename.
 
-#### options.unit
+##### options.unit
 Type: `Number`
 Default value: `10`
 
 Defines unit size of the grid the sprite elements snap to.
 
-#### options.refSize
+##### options.refSize
 Type: `String|Number`
 Optional
 
@@ -207,7 +207,7 @@ Defines the basic size of your source svg-elements. All other sizes will be calc
 
 Notice how one source element is bigger than the `refSize`; this ok - as every element is scaled proportionally.
 
-#### options.sizes
+##### options.sizes
 Type: `Object`
 Optional
 

@@ -6,7 +6,7 @@
 
 Minimal:
 
-```
+```js
 var builder = require("dr-svg-sprites");
 var options = {
 	spriteElementPath: "img/logos",
@@ -26,7 +26,7 @@ would yield the following files:
 
 Advanced:
 
-```
+```js
 var builder = require("dr-svg-sprites");
 var options = {
 	name: "tv",
@@ -157,7 +157,7 @@ Type: `Boolean`
 Default value: `true`
 Optional
 
-If set to `false` `width` and `height` for the svg elements will be omitted in the stylesheet. Useful in combination with a `options.layout` of `"alt-diagonal"`.
+If set to `false` `width` and `height` for the svg elements will be omitted from the stylesheet. Useful in combination with a `options.layout` of `"alt-diagonal"`.
 
 ##### options.template
 Type: `String`
@@ -168,7 +168,7 @@ Defines the path of the Handlebars template to use for generating the stylesheet
 
 The data object passed to the Handlebars template is a `Sprite` instance (see `./lib/Sprite.js`).
 
-Templates have e few internal helpers at their disposal:
+Templates have a few internal helpers at their disposal:
 
 - `url`: Takes a path (`String`) and returns a CSS appropriate path.
 - `unit`: Adds units to a value (`Number`) if needed and also converts from `px` to `rem`.
@@ -186,7 +186,7 @@ Defines the layout of elements in the sprite. Possible values:
 - `"vertical"`: Elements are placed above eachother.
 - `"packed"`: Elements are packed into smallest possible space.
 - `"diagonal"`: Elements are distributed from top-left to bottom-right corner.
-- `"alt-diagonal"`: Same as above but inverse direction.
+- `"alt-diagonal"`: Elements are distributed from bottom-left to top-right corner.
 
 ##### options.map
 Type: `Object|Function`
@@ -222,20 +222,43 @@ Optional
 A hash of size labels and values (`Number`) that define the different sizes of the needed sprites.
 
 ```js
-	var options = {
-		// some options
-		sizes: {
-			large: 39,
-			small: 13
-		},
-		refSize: "large",
-		// more options
-	};
+var options = {
+	// some options
+	sizes: {
+		large: 39,
+		small: 13
+	},
+	refSize: "large",
+	// more options
+};
 ```
 
 ![sizes](https://raw.github.com/drdk/grunt-dr-svg-sprites/master/docs/img/docs-sprite-sizes.png)
 
 1 SVG sprite is generated and 2 PNG sprites (1 per defined size).
+
+---
+
+## Changelog
+
+### 0.9.0
+
+Features:
+
+* `options.layout` added.
+* `options.map` added.
+* `options.template` added.
+* `options.previewPath` added.
+* `options.cssSvgPrefix` added.
+* `options.cssPngPrefix` added.
+* `options.cssUnit` added.
+* `options.cssBaseFontSize` added.
+* `options.cssIncludeElementSizes` added.
+
+Changes:
+
+* `options.sizes` and `options.refSize` are now optional (which also means no size tag is added to classnames if `options.sizes` is omitted).
+* `options.spritePath` and `options.cssPath` now accept a full path including filename for simpler configuration.
 
 
 

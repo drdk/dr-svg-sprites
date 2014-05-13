@@ -2,26 +2,47 @@
 {{#items}}
 {{className}} {
 {{#if ../../config/cssIncludeElementSizes}}
-	width: {{unit width}};
-	height: {{unit height}};
+    width: {{unit width}};
+    height: {{unit height}};
 {{/if}}
-	background-position: {{unit x -1}} {{unit y -1}};
+    background-position: {{unit x -1}} {{unit y -1}};
 }
 {{/items}}
 {{#if ../config/cssPngPrefix}}
 {{prefix items ""}} {
-	background-size: {{unit width}} {{unit height}};
+    background-size: {{unit width}} {{unit height}};
 }
 {{prefix items ../../config/cssPngPrefix}} {
-	background-image: url("{{url pngPath}}");
+    background-image: url("{{url pngPath}}");
 }
 {{else}}
 {{prefix items ""}} {
-	background-image: url("{{url pngPath}}");
-	background-size: {{unit width}} {{unit height}};
+    background-image: url("{{url pngPath}}");
+    background-size: {{unit width}} {{unit height}};
 }
 {{/if}}
+{{#each breakpoints}}
+{{this.query}} {
+    {{#each ../items}}
+    {{className}} {
+    {{~#if ../../../config/cssIncludeElementSizes}}
+        width: {{unit width ../../this.scale}};
+        height: {{unit height ../../this.scale}};
+    {{~/if}}
+        background-position: -{{unit x ../this.scale}} -{{unit y ../this.scale}};
+    }
+    {{/each}}
+}
+
+{{this.query}} {
+    {{prefixAll ../../sizes ../../config/cssSvgPrefix}} {
+        background-size: {{unit ../width this.scale }} {{unit ../height this.scale}};
+    }
+
+}
+{{/each}}
+
 {{/sizes}}
 {{prefixAll sizes config/cssSvgPrefix}} {
-	background-image: url("{{url svgPath}}");
+    background-image: url("{{url svgPath}}");
 }

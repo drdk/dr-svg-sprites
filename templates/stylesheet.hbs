@@ -23,20 +23,18 @@
 {{/if}}
 {{#each breakpoints}}
 {{this.query}} {
-    {{#each ../items}}
+    {{#../items}}
     {{className}} {
     {{~#if ../../../config/cssIncludeElementSizes}}
         width: {{unit width ../../this.scale}};
         height: {{unit height ../../this.scale}};
     {{~/if}}
-        background-position: -{{unit x ../this.scale}} -{{unit y ../this.scale}};
+        background-position: {{unit x ../this.scale -1}} {{unit y ../this.scale -1}};
     }
-    {{/each}}
-}
-
-{{this.query}} {
-    {{prefixAll ../../sizes ../../config/cssSvgPrefix}} {
-        background-size: {{unit ../width this.scale }} {{unit ../height this.scale}};
+    {{/../items}}
+    
+    {{prefix ../items ../../config/cssSvgPrefix}} {
+        background-size: {{unit ../width this.scale}} {{unit ../height this.scale}};
     }
 
 }

@@ -235,6 +235,25 @@ var options = {
 
 1 SVG sprite is generated and 2 PNG sprites (1 per defined size).
 
+#### options.breakpoints
+Type: `Array`
+Optional
+
+
+
+```js
+var options = {
+	// some options
+	breakpoints: [530, "80em", "@media only screen and (orientation:portrait)"],
+	sizes: {
+		large: [39, 52, 65, 39],
+		small: [13, 26, 39, 26]
+	},
+	// more options
+};
+
+```
+
 ---
 
 ## Changelog

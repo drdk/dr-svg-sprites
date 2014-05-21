@@ -22,7 +22,7 @@ module.exports = function (config, callback) {
 	var buildPreview = require("./lib/build-preview");
 
 	var glob = config.spriteElementPath + path.sep + "*.svg";
-	var sprite = new Sprite(config)
+	var sprite = new Sprite(config);
 
 	vfs.src(glob).pipe(build(sprite));
 

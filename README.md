@@ -199,9 +199,10 @@ If a function is supplied it will be used to transform the svg element basename.
 
 #### options.unit
 Type: `Number`
-Default value: `10`
+Default value: `5`
 
 Defines unit size of the grid the sprite elements snap to.
+If `options.sizes` is used a default unit size will calculated to ensure placement is  across the different sizes.
 
 #### options.refSize
 Type: `String|Number`
@@ -217,7 +218,7 @@ Notice how one source element is bigger than the `refSize`; this ok - as every e
 Type: `Object`
 Optional
 
-A hash of size labels and values (`Number`) that define the different sizes of the needed sprites.
+A hash of size labels and values (`Number` - or `Array` if used in conjunction with `options.breakpoints` - see below) that define the different sizes of the needed sprites.
 
 ```js
 var options = {
@@ -239,7 +240,9 @@ var options = {
 Type: `Array`
 Optional
 
-
+Let's you define breakpoints or custom media queries for a sprite.
+Each value in the array is transformed into a media query string (if it's not already one) via the `options.baseQuery` template.
+Numbers are automatically prepended `px` units.
 
 ```js
 var options = {
@@ -251,7 +254,26 @@ var options = {
 	},
 	// more options
 };
+```
 
+#### options.baseQuery
+Type: `String`
+Default value: `"@media only screen and (min-width: {{breakpoint}})"`
+Optional
+
+Used to generate media query strings from the values of `options.breakpoints` by replacing the `{{breakpoint}}` token with each.
+
+```js
+var options = {
+	// some options
+	baseQuery: "@media only screen and (monochrome) and (min-width: {{breakpoint}})",
+	breakpoints: [530, 960, 1280],
+	sizes: {
+		large: [39, 52, 65, 39],
+		small: [13, 26, 39, 26]
+	},
+	// more options
+};
 ```
 
 ---

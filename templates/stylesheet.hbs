@@ -1,29 +1,34 @@
-{{#sizes}}
-{{#items}}
+{{~#sizes~}}
+{{~#items~}}
 {{className}} {
-{{#if ../../config/cssIncludeElementSizes}}
+{{~#if ../../config/cssIncludeElementSizes}}
 	width: {{unit width}};
 	height: {{unit height}};
-{{/if}}
+{{~/if}}
 	background-position: {{unit x -1}} {{unit y -1}};
 }
-{{/items}}
-{{#if ../config/cssPngPrefix}}
+
+{{/items~}}
+{{~#if ../config/cssPngPrefix~}}
 {{prefix items ""}} {
 	background-size: {{unit width}} {{unit height}};
 }
+
 {{prefix items ../../config/cssPngPrefix}} {
 	background-image: url("{{url pngPath}}");
 }
-{{else}}
+
+{{else~}}
 {{prefix items ""}} {
 	background-image: url("{{url pngPath}}");
 	background-size: {{unit width}} {{unit height}};
 }
-{{/if}}
-{{#breakpoints}}
+
+{{/if~}}
+{{~#breakpoints~}}
 {{query}} {
-{{#items}}
+	{{~#items}}
+	
 	{{className}} {
 	{{~#if ../../../config/cssIncludeElementSizes}}
 		width: {{unit width}};
@@ -31,16 +36,16 @@
 	{{~/if}}
 		background-position: {{unit x -1}} {{unit y -1}};
 	}
-	{{/items}}
+	{{~/items}}
 	
 	{{prefix items ""}} {
 		background-size: {{unit width}} {{unit height}};
 	}
 
 }
-{{/breakpoints}}
 
-{{/sizes}}
+{{/breakpoints~}}
+{{~/sizes~}}
 {{prefixAll sizes config/cssSvgPrefix}} {
 	background-image: url("{{url svgPath}}");
 }

@@ -290,6 +290,10 @@ Features:
 * `options.breakpoints` added.
 * `options.baseQuery` added.
 
+Changes:
+
+* `options.sizes` also accepts arrays of values when used in combination with `options.breakpoints`.
+* White-space can now be controlled in templates without it getting clobbered.
 
 ### 0.9.0
 

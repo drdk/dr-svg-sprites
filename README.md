@@ -243,6 +243,7 @@ Optional
 Let's you define breakpoints or custom media queries for a sprite.
 Each value in the array is transformed into a media query string (if it's not already one) via the `options.baseQuery` template.
 Numbers are automatically prepended `px` units.
+Values in `options.sizes` are expanded to arrays of values; the first value is the default size value used without media queries and each subsequent value is matched with a corresponding `options.breakpoints` value.
 
 ```js
 var options = {
@@ -255,6 +256,8 @@ var options = {
 	// more options
 };
 ```
+
+**Note**: No additional PNG fallbacks are generated for breakpoints in the thinking that clients supporting media queries also have SVG support.
 
 #### options.baseQuery
 Type: `String`
@@ -279,6 +282,14 @@ var options = {
 ---
 
 ## Changelog
+
+### 0.9.5
+
+Features:
+
+* `options.breakpoints` added.
+* `options.baseQuery` added.
+
 
 ### 0.9.0
 

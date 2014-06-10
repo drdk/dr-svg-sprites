@@ -37,31 +37,33 @@ module.exports = function (config, callback) {
 
 			sprite.prepare();
 
-			var tasks = [
-				function (callback) {
-					buildSVG(sprite, function () {
-						buildPNG(sprite, callback);
+			var tasks = {};
+
+			tasks.images = function (callback) {
+				buildSVG(sprite, function (err, file) {
+					buildPNG(sprite, function (err, files) {
+						callback(null, [file].concat(files));
 					});
-				}
-			];
+				});
+			};
 			
 			if (sprite.cssPath) {
-				tasks.push(function (callback) {
+				tasks.css = function (callback) {
 					buildCSS(sprite, callback);
-				});
+				};
 			}
 			
 			if (sprite.previewPath) {
-				tasks.push(function (callback) {
+				tasks.preview = function (callback) {
 					buildPreview(sprite, callback);
-				});
+				};
 			}
 
 			async.parallel(
 				tasks,
-				function () {
+				function (err, result) {
 					if (typeof callback == "function") {
-						callback(null);
+						callback(null, result);
 					}
 				}
 			);

@@ -40,5 +40,9 @@
   "keywords": [
     "svg",
     "sprites"
-  ]
+  ],
+  "devDependencies": {
+    "diff": "^1.0.8",
+    "hashfile": "0.0.0"
+  }
 }

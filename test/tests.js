@@ -48,8 +48,8 @@ module.exports = [
 	},
 
 	{
-		name: "cssIncludeElementsSizes",
-		cssIncludeElementsSizes: false
+		name: "cssIncludeElementSizes",
+		cssIncludeElementSizes: false
 	},
 
 	{

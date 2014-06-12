@@ -122,8 +122,8 @@ module.exports = [
 		breakpoints: [400, 640, 800],
 		refSize: "medium",
 		sizes: {
-			small: [13, 26, 39],
-			medium: [26, 39, 52]
+			small: [13, 26, 39, 52],
+			medium: [26, 39, 52, 65]
 		}
 	},
 
@@ -132,8 +132,8 @@ module.exports = [
 		breakpoints: ["30em", "60em", "90em"],
 		refSize: "medium",
 		sizes: {
-			small: [13, 26, 39],
-			medium: [26, 39, 52]
+			small: [13, 26, 39, 52],
+			medium: [26, 39, 52, 65]
 		}
 	},
 
@@ -142,8 +142,8 @@ module.exports = [
 		breakpoints: ["@media only screen and (min-width: 30.0625em) and (max-width: 60em)", "@media only screen and (min-width: 60.0625em) and (max-width: 90em)", "@media only screen and (min-width: 90.0625em)"],
 		refSize: "medium",
 		sizes: {
-			small: [13, 26, 39],
-			medium: [26, 39, 52]
+			small: [13, 26, 39, 52],
+			medium: [26, 39, 52, 65]
 		}
 	},
 
@@ -153,8 +153,8 @@ module.exports = [
 		breakpoints: [400, 640, 800],
 		refSize: "medium",
 		sizes: {
-			small: [13, 26, 39],
-			medium: [26, 39, 52]
+			small: [13, 26, 39, 52],
+			medium: [26, 39, 52, 65]
 		}
 	}
 

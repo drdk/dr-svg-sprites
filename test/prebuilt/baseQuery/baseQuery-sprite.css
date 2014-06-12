@@ -76,25 +76,25 @@
 @media only screen and (orientation:portrait) and (min-width: 800px) {
 	
 	.square-small {
-		width: NaNpx;
-		height: NaNpx;
-		background-position: NaNpx NaNpx;
+		width: 52px;
+		height: 52px;
+		background-position: 0 0;
 	}
 	
 	.circle-small {
-		width: NaNpx;
-		height: NaNpx;
-		background-position: NaNpx NaNpx;
+		width: 60px;
+		height: 60px;
+		background-position: -54px 0;
 	}
 	
 	.triangle-small {
-		width: NaNpx;
-		height: NaNpx;
-		background-position: NaNpx NaNpx;
+		width: 60px;
+		height: 52px;
+		background-position: -116px 0;
 	}
 	
 	.square-small, .circle-small, .triangle-small {
-		background-size: NaNpx NaNpx;
+		background-size: 178px 62px;
 	}
 
 }
@@ -177,25 +177,25 @@
 @media only screen and (orientation:portrait) and (min-width: 800px) {
 	
 	.square-medium {
-		width: NaNpx;
-		height: NaNpx;
-		background-position: NaNpx NaNpx;
+		width: 65px;
+		height: 65px;
+		background-position: 0 0;
 	}
 	
 	.circle-medium {
-		width: NaNpx;
-		height: NaNpx;
-		background-position: NaNpx NaNpx;
+		width: 75px;
+		height: 75px;
+		background-position: -68px 0;
 	}
 	
 	.triangle-medium {
-		width: NaNpx;
-		height: NaNpx;
-		background-position: NaNpx NaNpx;
+		width: 75px;
+		height: 65px;
+		background-position: -145px 0;
 	}
 	
 	.square-medium, .circle-medium, .triangle-medium {
-		background-size: NaNpx NaNpx;
+		background-size: 223px 78px;
 	}
 
 }

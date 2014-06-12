@@ -1,24 +1,24 @@
 .circle {
-	width: 30px;
-	height: 30px;
+	width: 3rem;
+	height: 3rem;
 	background-position: 0 0;
 }
 
 .square {
-	width: 26px;
-	height: 26px;
-	background-position: -35px 0;
+	width: 2.6rem;
+	height: 2.6rem;
+	background-position: -3.5rem 0;
 }
 
 .triangle {
-	width: 30px;
-	height: 26px;
-	background-position: -70px 0;
+	width: 3rem;
+	height: 2.6rem;
+	background-position: -7rem 0;
 }
 
 .circle, .square, .triangle {
 	background-image: url("../previewPath/previewPath-sprite.png");
-	background-size: 105px 35px;
+	background-size: 10.5rem 3.5rem;
 }
 
 .svg .circle, .svg .square, .svg .triangle {

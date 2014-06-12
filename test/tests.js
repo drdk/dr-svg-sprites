@@ -2,8 +2,7 @@ module.exports = [
 	
 	{
 		name: "previewPath",
-		previewPath: "./tmp/previewPath/previewPath.html",
-		cssUnit: "rem"
+		previewPath: "./tmp/previewPath/previewPath.html"
 	},
 
 	{

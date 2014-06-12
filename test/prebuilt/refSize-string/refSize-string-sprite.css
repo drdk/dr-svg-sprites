@@ -1,0 +1,72 @@
+.square-small {
+	width: 13px;
+	height: 13px;
+	background-position: 0 0;
+}
+
+.circle-small {
+	width: 15px;
+	height: 15px;
+	background-position: -14px 0;
+}
+
+.triangle-small {
+	width: 15px;
+	height: 13px;
+	background-position: -29px 0;
+}
+
+.square-small, .circle-small, .triangle-small {
+	background-image: url("../refSize-string/refSize-string-sprite-small.png");
+	background-size: 45px 16px;
+}
+
+.square-medium {
+	width: 26px;
+	height: 26px;
+	background-position: 0 0;
+}
+
+.circle-medium {
+	width: 30px;
+	height: 30px;
+	background-position: -27px 0;
+}
+
+.triangle-medium {
+	width: 30px;
+	height: 26px;
+	background-position: -58px 0;
+}
+
+.square-medium, .circle-medium, .triangle-medium {
+	background-image: url("../refSize-string/refSize-string-sprite-medium.png");
+	background-size: 89px 31px;
+}
+
+.square-large {
+	width: 39px;
+	height: 39px;
+	background-position: 0 0;
+}
+
+.circle-large {
+	width: 45px;
+	height: 45px;
+	background-position: -41px 0;
+}
+
+.triangle-large {
+	width: 45px;
+	height: 39px;
+	background-position: -87px 0;
+}
+
+.square-large, .circle-large, .triangle-large {
+	background-image: url("../refSize-string/refSize-string-sprite-large.png");
+	background-size: 134px 47px;
+}
+
+.svg .square-small, .svg .circle-small, .svg .triangle-small, .svg .square-medium, .svg .circle-medium, .svg .triangle-medium, .svg .square-large, .svg .circle-large, .svg .triangle-large {
+	background-image: url("../refSize-string/refSize-string-sprite.svg");
+}

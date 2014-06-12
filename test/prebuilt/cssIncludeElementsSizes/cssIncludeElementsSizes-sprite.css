@@ -1,0 +1,26 @@
+.circle {
+	width: 30px;
+	height: 30px;
+	background-position: 0 0;
+}
+
+.square {
+	width: 26px;
+	height: 26px;
+	background-position: -35px 0;
+}
+
+.triangle {
+	width: 30px;
+	height: 26px;
+	background-position: -70px 0;
+}
+
+.circle, .square, .triangle {
+	background-image: url("../cssIncludeElementsSizes/cssIncludeElementsSizes-sprite.png");
+	background-size: 105px 35px;
+}
+
+.svg .circle, .svg .square, .svg .triangle {
+	background-image: url("../cssIncludeElementsSizes/cssIncludeElementsSizes-sprite.svg");
+}

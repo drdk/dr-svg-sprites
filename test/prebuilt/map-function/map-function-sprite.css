@@ -1,0 +1,26 @@
+.elcric {
+	width: 30px;
+	height: 30px;
+	background-position: 0 0;
+}
+
+.erauqs {
+	width: 26px;
+	height: 26px;
+	background-position: -35px 0;
+}
+
+.elgnairt {
+	width: 30px;
+	height: 26px;
+	background-position: -70px 0;
+}
+
+.elcric, .erauqs, .elgnairt {
+	background-image: url("../map-function/map-function-sprite.png");
+	background-size: 105px 35px;
+}
+
+.svg .elcric, .svg .erauqs, .svg .elgnairt {
+	background-image: url("../map-function/map-function-sprite.svg");
+}

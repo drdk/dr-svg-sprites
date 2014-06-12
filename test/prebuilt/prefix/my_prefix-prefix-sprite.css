@@ -1,0 +1,26 @@
+.my_prefix-circle {
+	width: 30px;
+	height: 30px;
+	background-position: 0 0;
+}
+
+.my_prefix-square {
+	width: 26px;
+	height: 26px;
+	background-position: -35px 0;
+}
+
+.my_prefix-triangle {
+	width: 30px;
+	height: 26px;
+	background-position: -70px 0;
+}
+
+.my_prefix-circle, .my_prefix-square, .my_prefix-triangle {
+	background-image: url("../prefix/my_prefix-prefix-sprite.png");
+	background-size: 105px 35px;
+}
+
+.svg .my_prefix-circle, .svg .my_prefix-square, .svg .my_prefix-triangle {
+	background-image: url("../prefix/my_prefix-prefix-sprite.svg");
+}

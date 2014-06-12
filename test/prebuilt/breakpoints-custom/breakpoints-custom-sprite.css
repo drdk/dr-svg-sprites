@@ -1,0 +1,205 @@
+.square-small {
+	width: 13px;
+	height: 13px;
+	background-position: 0 0;
+}
+
+.circle-small {
+	width: 15px;
+	height: 15px;
+	background-position: -14px 0;
+}
+
+.triangle-small {
+	width: 15px;
+	height: 13px;
+	background-position: -29px 0;
+}
+
+.square-small, .circle-small, .triangle-small {
+	background-image: url("../breakpoints-custom/breakpoints-custom-sprite-small.png");
+	background-size: 45px 16px;
+}
+
+@media only screen and (min-width: 30.0625em) and (max-width: 60em) {
+	
+	.square-small {
+		width: 26px;
+		height: 26px;
+		background-position: 0 0;
+	}
+	
+	.circle-small {
+		width: 30px;
+		height: 30px;
+		background-position: -27px 0;
+	}
+	
+	.triangle-small {
+		width: 30px;
+		height: 26px;
+		background-position: -58px 0;
+	}
+	
+	.square-small, .circle-small, .triangle-small {
+		background-size: 89px 31px;
+	}
+
+}
+
+@media only screen and (min-width: 60.0625em) and (max-width: 90em) {
+	
+	.square-small {
+		width: 39px;
+		height: 39px;
+		background-position: 0 0;
+	}
+	
+	.circle-small {
+		width: 45px;
+		height: 45px;
+		background-position: -41px 0;
+	}
+	
+	.triangle-small {
+		width: 45px;
+		height: 39px;
+		background-position: -87px 0;
+	}
+	
+	.square-small, .circle-small, .triangle-small {
+		background-size: 134px 47px;
+	}
+
+}
+
+@media only screen and (min-width: 90.0625em) {
+	
+	.square-small {
+		width: NaNpx;
+		height: NaNpx;
+		background-position: NaNpx NaNpx;
+	}
+	
+	.circle-small {
+		width: NaNpx;
+		height: NaNpx;
+		background-position: NaNpx NaNpx;
+	}
+	
+	.triangle-small {
+		width: NaNpx;
+		height: NaNpx;
+		background-position: NaNpx NaNpx;
+	}
+	
+	.square-small, .circle-small, .triangle-small {
+		background-size: NaNpx NaNpx;
+	}
+
+}
+
+.square-medium {
+	width: 26px;
+	height: 26px;
+	background-position: 0 0;
+}
+
+.circle-medium {
+	width: 30px;
+	height: 30px;
+	background-position: -27px 0;
+}
+
+.triangle-medium {
+	width: 30px;
+	height: 26px;
+	background-position: -58px 0;
+}
+
+.square-medium, .circle-medium, .triangle-medium {
+	background-image: url("../breakpoints-custom/breakpoints-custom-sprite-medium.png");
+	background-size: 89px 31px;
+}
+
+@media only screen and (min-width: 30.0625em) and (max-width: 60em) {
+	
+	.square-medium {
+		width: 39px;
+		height: 39px;
+		background-position: 0 0;
+	}
+	
+	.circle-medium {
+		width: 45px;
+		height: 45px;
+		background-position: -41px 0;
+	}
+	
+	.triangle-medium {
+		width: 45px;
+		height: 39px;
+		background-position: -87px 0;
+	}
+	
+	.square-medium, .circle-medium, .triangle-medium {
+		background-size: 134px 47px;
+	}
+
+}
+
+@media only screen and (min-width: 60.0625em) and (max-width: 90em) {
+	
+	.square-medium {
+		width: 52px;
+		height: 52px;
+		background-position: 0 0;
+	}
+	
+	.circle-medium {
+		width: 60px;
+		height: 60px;
+		background-position: -54px 0;
+	}
+	
+	.triangle-medium {
+		width: 60px;
+		height: 52px;
+		background-position: -116px 0;
+	}
+	
+	.square-medium, .circle-medium, .triangle-medium {
+		background-size: 178px 62px;
+	}
+
+}
+
+@media only screen and (min-width: 90.0625em) {
+	
+	.square-medium {
+		width: NaNpx;
+		height: NaNpx;
+		background-position: NaNpx NaNpx;
+	}
+	
+	.circle-medium {
+		width: NaNpx;
+		height: NaNpx;
+		background-position: NaNpx NaNpx;
+	}
+	
+	.triangle-medium {
+		width: NaNpx;
+		height: NaNpx;
+		background-position: NaNpx NaNpx;
+	}
+	
+	.square-medium, .circle-medium, .triangle-medium {
+		background-size: NaNpx NaNpx;
+	}
+
+}
+
+.svg .square-small, .svg .circle-small, .svg .triangle-small, .svg .square-medium, .svg .circle-medium, .svg .triangle-medium {
+	background-image: url("../breakpoints-custom/breakpoints-custom-sprite.svg");
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>breakpoints-custom</title>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			body {
+				padding: 20px;
+				font-family: Arial, sans-serif;
+			}
+			h2 {
+				line-height: 1;
+				margin-bottom: 20px;
+				padding-bottom: 20px;
+				border-bottom: black 1px solid;
+			}
+			h3 {
+				line-height: 1;
+				margin-bottom: 20px;
+				padding-bottom: 20px;
+				border-bottom: lightgrey 1px solid;
+			}
+			.icon-test-container + h2 {
+				margin-top: 80px;
+			}
+			.icon-test-size {
+				margin-top: 40px;
+			}
+			.icon-test-size + .icon-test-size {
+				_border-top: lightgrey 1px solid;
+				margin-top: 20px;
+				padding-top: 20px;
+			}
+			span {
+				display: inline-block;
+				margin-right: 20px;
+				vertical-align: top;
+				width: 50px;
+				height: 50px;
+			}
+			span:hover {
+				background-color: #FF8;
+			}
+			hr {
+				margin: 20px 0;
+			}
+		</style>
+		<link href="breakpoints-custom-sprite.css" rel="stylesheet" />
+	</head>
+	<body>
+		<h2>SVG</h2>
+		<div class="icon-test-container svg ">
+			
+				<div class="icon-test-size">
+					<h3>small</h3>
+					
+					<span class="square-small" title="square-small"></span>
+					
+					<span class="circle-small" title="circle-small"></span>
+					
+					<span class="triangle-small" title="triangle-small"></span>
+					
+				</div>
+			
+				<div class="icon-test-size">
+					<h3>medium</h3>
+					
+					<span class="square-medium" title="square-medium"></span>
+					
+					<span class="circle-medium" title="circle-medium"></span>
+					
+					<span class="triangle-medium" title="triangle-medium"></span>
+					
+				</div>
+			
+		</div>
+
+		<h2>PNG</h2>
+		<div class="icon-test-container ">
+			
+				<div class="icon-test-size">
+					<h3>small</h3>
+					
+					<span class="square-small" title="square-small"></span>
+					
+					<span class="circle-small" title="circle-small"></span>
+					
+					<span class="triangle-small" title="triangle-small"></span>
+					
+				</div>
+			
+				<div class="icon-test-size">
+					<h3>medium</h3>
+					
+					<span class="square-medium" title="square-medium"></span>
+					
+					<span class="circle-medium" title="circle-medium"></span>
+					
+					<span class="triangle-medium" title="triangle-medium"></span>
+					
+				</div>
+			
+		</div>
+	</body>
+</html>

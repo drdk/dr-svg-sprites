@@ -1,0 +1,26 @@
+.circle {
+	width: 30px;
+	height: 30px;
+	background-position: 0 0;
+}
+
+.square {
+	width: 26px;
+	height: 26px;
+	background-position: 0 -35px;
+}
+
+.triangle {
+	width: 30px;
+	height: 26px;
+	background-position: 0 -70px;
+}
+
+.circle, .square, .triangle {
+	background-image: url("../layout-vertical/layout-vertical-sprite.png");
+	background-size: 35px 105px;
+}
+
+.svg .circle, .svg .square, .svg .triangle {
+	background-image: url("../layout-vertical/layout-vertical-sprite.svg");
+}

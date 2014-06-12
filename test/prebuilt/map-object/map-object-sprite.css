@@ -1,0 +1,26 @@
+.sphere {
+	width: 30px;
+	height: 30px;
+	background-position: 0 0;
+}
+
+.cube {
+	width: 26px;
+	height: 26px;
+	background-position: -35px 0;
+}
+
+.pyramid {
+	width: 30px;
+	height: 26px;
+	background-position: -70px 0;
+}
+
+.sphere, .cube, .pyramid {
+	background-image: url("../map-object/map-object-sprite.png");
+	background-size: 105px 35px;
+}
+
+.svg .sphere, .svg .cube, .svg .pyramid {
+	background-image: url("../map-object/map-object-sprite.svg");
+}

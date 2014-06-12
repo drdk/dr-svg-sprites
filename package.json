@@ -44,5 +44,8 @@
   "devDependencies": {
     "diff": "^1.0.8",
     "hashfile": "0.0.0"
+  },
+  "scripts": {
+    "test": "node test/runner.js"
   }
 }

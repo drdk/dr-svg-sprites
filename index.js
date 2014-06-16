@@ -29,7 +29,7 @@ module.exports = function (config, callback) {
 	function build (sprite) {
 
 		return through.obj(function (file, encoding, callback) {
-			svgutil.parse(sprite,file.contents.toString(), function (err, data) {
+			svgutil.parse(file.contents.toString(), sprite.config.svgo, function (err, data) {
 				sprite.addItem(file.path, data.source, data.width, data.height);
 				callback(null);
 			});

@@ -75,6 +75,8 @@ would yield the following files:
 - [options.unit](#optionsunit)
 - [options.refSize](#optionsrefSize)
 - [options.sizes](#optionssizes)
+- [options.breakpoints](#optionsbreakpoints)
+- [options.baseQuery](#optionsbasequery)
 - [options.svgo](#optionssvgo)
 
 
@@ -305,6 +307,20 @@ var options = {
 Type: `Object`
 Optional
 
+This options gives a direct route to configure [svgo](https://github.com/svg/svgo) which is used behind the scene reading and outputting SVG's.
+
+```js
+var options = {
+	// some options
+	svgo: {
+		plugins: [
+			{ mergePaths: false },
+			{ convertTransforms: false }
+		]
+	},
+	// more options
+}
+```
 
 ---
 
@@ -354,7 +370,7 @@ if (comma === "last" && useTabs && semicolons) {
 
 ### Testing
 
-Testing consists of building a suite of test sprites to a tmp folder. The generated files are then diffed against the corresponding files in `test/prebuilt`.
+Testing consists of building a suite of test sprites (configs defined in `test/tests.js`) to a tmp folder. The generated files are then diffed against the corresponding files in `test/prebuilt`.
 Any changes are logged to the console either as just `changed` (png) or as full patch-style output (svg, html, css etc). 
 
 The full test suite can be run in a console with:

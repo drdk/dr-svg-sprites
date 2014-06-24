@@ -56,6 +56,28 @@ would yield the following files:
 
 ### Options
 
+- [options.name](#optionsname)
+- [options.spriteElementPath](#optionsspriteelementpath)
+- [options.spritePath](#optionsspritepath)
+- [options.previewPath](#optionspreviewpath)
+- [options.cssPath](#optionscsspath)
+- [options.cssPrefix](#optionscssPrefix)
+- [options.cssSuffix](#optionscsspath)
+- [options.cssSvgPrefix](#optionscsspath)
+- [options.cssPngPrefix](#optionscsspath)
+- [options.cssPath](#optionscsspath)
+- [options.cssUnit](#optionscssunit)
+- [options.cssBaseFontSize](#optionscssbasefontsize)
+- [options.cssIncludeElementSizes](#optionscssincludeelementsizes)
+- [options.template](#optionstemplate)
+- [options.layout](#optionslayout)
+- [options.map](#optionsmap)
+- [options.unit](#optionsunit)
+- [options.refSize](#optionsrefSize)
+- [options.sizes](#optionssizes)
+- [options.svgo](#optionssvgo)
+
+
 #### options.name
 Type: `String`
 Optional
@@ -279,9 +301,94 @@ var options = {
 };
 ```
 
+#### options.svgo
+Type: `Object`
+Optional
+
+
+---
+
+## Contributing
+
+Pull request for bug-fixes/features are welcome - though I will reserve judgement on what actually goes in ;)
+
+New features should be accompanied by [tests](#testing).
+
+### Code style
+
+Basically you should just try to follow the general style of the existing code.
+
+**Do's:**
+
+* Tabs for indentation, spaces for alignment.
+* Separate var-statements when also assigning values.
+* Semicolons.
+
+**Dont's:**
+
+* Single-line if/else-statements.
+* Pad parens with spaces.
+* Comma-first.
+
+```js
+var style = {
+	comma: "last",
+	useTabs: true,
+	semicolons: true
+};
+var useTabs = false;
+var comma, semicolons;
+
+if (!useTabs) {
+	useTabs = style.useTabs;
+}
+
+comma = style.comma;
+semicolons = style.semicolons;
+
+if (comma === "last" && useTabs && semicolons) {
+	console.log("Thumbs up!");
+}
+```
+
+
+### Testing
+
+Testing consists of building a suite of test sprites to a tmp folder. The generated files are then diffed against the corresponding files in `test/prebuilt`.
+Any changes are logged to the console either as just `changed` (png) or as full patch-style output (svg, html, css etc). 
+
+The full test suite can be run in a console with:
+
+```
+npm test
+```
+
+or
+
+```
+node test/runner.js
+```
+
+Specific tests can be run by supplying the names of the tests as additional arguments:
+
+```
+node test/runner.js map-object map-function
+```
+
 ---
 
 ## Changelog
+
+### 0.9.7
+
+Features:
+
+* `options.svgo` added.
+
+Changes:
+
+* `options.spriteElementPath` now also supports glob patterns.
+* Added tests.
 
 ### 0.9.5
 
@@ -313,7 +420,3 @@ Changes:
 
 * `options.sizes` and `options.refSize` are now optional (which also means no size tag is added to classnames if `options.sizes` is omitted).
 * `options.spritePath` and `options.cssPath` now also accept a full path including filename for simpler configuration.
-
-
-
-[![Analytics](https://ga-beacon.appspot.com/UA-8318361-2/drdk/dr-svg-sprites)](https://github.com/igrigorik/ga-beacon)

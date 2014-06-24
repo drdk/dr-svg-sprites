@@ -371,7 +371,8 @@ if (comma === "last" && useTabs && semicolons) {
 ### Testing
 
 Testing consists of building a suite of test sprites (configs defined in `test/tests.js`) to a tmp folder. The generated files are then diffed against the corresponding files in `test/prebuilt`.
-Any changes are logged to the console either as just `changed` (png) or as full patch-style output (svg, html, css etc). 
+Any changes are logged to the console either as just `changed` (png) or as full patch-style output (svg, html, css etc).
+When changes have been vetted any valid changes should be moved to `test/prebuilt` and commited.  
 
 The full test suite can be run in a console with:
 

@@ -11,10 +11,11 @@
 }
 
 .circle, .square, .triangle {
-	background-image: url("../cssIncludeElementSizes/cssIncludeElementSizes-sprite.png");
+	background-image: url("cssIncludeElementSizes-sprite.png");
+	background-repeat: no-repeat;
 	background-size: 105px 35px;
 }
 
 .svg .circle, .svg .square, .svg .triangle {
-	background-image: url("../cssIncludeElementSizes/cssIncludeElementSizes-sprite.svg");
+	background-image: url("cssIncludeElementSizes-sprite.svg");
 }

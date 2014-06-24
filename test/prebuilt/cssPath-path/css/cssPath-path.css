@@ -17,10 +17,11 @@
 }
 
 .circle, .square, .triangle {
-	background-image: url("../cssUnit/cssUnit-sprite.png");
+	background-image: url("../cssPath-path-sprite.png");
+	background-repeat: no-repeat;
 	background-size: 105px 35px;
 }
 
 .svg .circle, .svg .square, .svg .triangle {
-	background-image: url("../cssUnit/cssUnit-sprite.svg");
+	background-image: url("../cssPath-path-sprite.svg");
 }

@@ -17,13 +17,13 @@
 }
 
 .circle, .square, .triangle {
-	background-size: 105px 35px;
+	background-size:  ;
 }
 
 .supports-png .circle, .supports-png .square, .supports-png .triangle {
-	background-image: url("../cssPngPrefix-cssSvgPrefix/cssPngPrefix-cssSvgPrefix-sprite.png");
+	background-image: url("cssPngPrefix-cssSvgPrefix-sprite.png");
 }
 
 .supports-svg .circle, .supports-svg .square, .supports-svg .triangle {
-	background-image: url("../cssPngPrefix-cssSvgPrefix/cssPngPrefix-cssSvgPrefix-sprite.svg");
+	background-image: url("cssPngPrefix-cssSvgPrefix-sprite.svg");
 }

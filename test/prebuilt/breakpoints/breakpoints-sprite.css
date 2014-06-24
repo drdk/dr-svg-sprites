@@ -17,7 +17,8 @@
 }
 
 .square-small, .circle-small, .triangle-small {
-	background-image: url("../breakpoints/breakpoints-sprite-small.png");
+	background-image: url("breakpoints-sprite-small.png");
+	background-repeat: no-repeat;
 	background-size: 45px 16px;
 }
 
@@ -118,7 +119,8 @@
 }
 
 .square-medium, .circle-medium, .triangle-medium {
-	background-image: url("../breakpoints/breakpoints-sprite-medium.png");
+	background-image: url("breakpoints-sprite-medium.png");
+	background-repeat: no-repeat;
 	background-size: 89px 31px;
 }
 
@@ -201,5 +203,5 @@
 }
 
 .svg .square-small, .svg .circle-small, .svg .triangle-small, .svg .square-medium, .svg .circle-medium, .svg .triangle-medium {
-	background-image: url("../breakpoints/breakpoints-sprite.svg");
+	background-image: url("breakpoints-sprite.svg");
 }

@@ -2,26 +2,27 @@
 {{~#items~}}
 {{className}} {
 {{~#if ../../config/cssIncludeElementSizes}}
-	width: {{unit width}};
-	height: {{unit height}};
+	width: {{unit width ../../../config/cssUnit ../../../config/cssBaseFontSize}};
+	height: {{unit height ../../../config/cssUnit ../../../config/cssBaseFontSize}};
 {{~/if}}
-	background-position: {{unit x -1}} {{unit y -1}};
+	background-position: {{unit x ../../config/cssUnit ../../config/cssBaseFontSize -1}} {{unit y ../../config/cssUnit ../../config/cssBaseFontSize -1}};
 }
 
 {{/items~}}
 {{~#if ../config/cssPngPrefix~}}
 {{prefix items ""}} {
-	background-size: {{unit width}} {{unit height}};
+	background-size: {{unit width ../config/cssUnit ../config/cssBaseFontSize}} {{unit height ../config/cssUnit ../config/cssBaseFontSize}};
 }
 
 {{prefix items ../../config/cssPngPrefix}} {
-	background-image: url("{{url pngPath}}");
+	background-image: url("{{_url pngPath ../../cssPath}}");
 }
 
 {{else~}}
 {{prefix items ""}} {
-	background-image: url("{{url pngPath}}");
-	background-size: {{unit width}} {{unit height}};
+	background-image: url("{{_url pngPath ../../cssPath}}");
+	background-repeat: no-repeat;
+	background-size: {{unit width ../../config/cssUnit ../../config/cssBaseFontSize}} {{unit height ../../config/cssUnit ../../config/cssBaseFontSize}};
 }
 
 {{/if~}}
@@ -31,15 +32,15 @@
 	
 	{{className}} {
 	{{~#if ../../../config/cssIncludeElementSizes}}
-		width: {{unit width}};
-		height: {{unit height}};
+		width: {{unit width ../../../../config/cssUnit ../../../../config/cssBaseFontSize}};
+		height: {{unit height ../../../../config/cssUnit ../../../../config/cssBaseFontSize}};
 	{{~/if}}
-		background-position: {{unit x -1}} {{unit y -1}};
+		background-position: {{unit x ../../../config/cssUnit ../../../config/cssBaseFontSize -1}} {{unit y ../../../config/cssUnit ../../../config/cssBaseFontSize -1}};
 	}
 	{{~/items}}
 	
 	{{prefix items ""}} {
-		background-size: {{unit width}} {{unit height}};
+		background-size: {{unit width ../../config/cssUnit ../../config/cssBaseFontSize}} {{unit height ../../config/cssUnit ../../config/cssBaseFontSize}};
 	}
 
 }
@@ -47,5 +48,5 @@
 {{/breakpoints~}}
 {{~/sizes~}}
 {{prefixAll sizes config/cssSvgPrefix}} {
-	background-image: url("{{url svgPath}}");
+	background-image: url("{{_url svgPath cssPath}}");
 }

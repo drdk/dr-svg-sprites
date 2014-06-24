@@ -1,0 +1,27 @@
+.circle {
+	width: 1.875em;
+	height: 1.875em;
+	background-position: 0 0;
+}
+
+.square {
+	width: 1.625em;
+	height: 1.625em;
+	background-position: -2.1875em 0;
+}
+
+.triangle {
+	width: 1.875em;
+	height: 1.625em;
+	background-position: -4.375em 0;
+}
+
+.circle, .square, .triangle {
+	background-image: url("cssUnit-em-sprite.png");
+	background-repeat: no-repeat;
+	background-size: 6.5625em 2.1875em;
+}
+
+.svg .circle, .svg .square, .svg .triangle {
+	background-image: url("cssUnit-em-sprite.svg");
+}

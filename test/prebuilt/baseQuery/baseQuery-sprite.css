@@ -18,6 +18,7 @@
 
 .square-small, .circle-small, .triangle-small {
 	background-image: url("baseQuery-sprite-small.png");
+	background-repeat: no-repeat;
 	background-size: 45px 16px;
 }
 
@@ -119,6 +120,7 @@
 
 .square-medium, .circle-medium, .triangle-medium {
 	background-image: url("baseQuery-sprite-medium.png");
+	background-repeat: no-repeat;
 	background-size: 89px 31px;
 }
 

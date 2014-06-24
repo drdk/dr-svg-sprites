@@ -21,10 +21,9 @@ module.exports = function (config, callback) {
 	var buildPNG = require("./lib/build-png");
 	var buildPreview = require("./lib/build-preview");
 
-	var glob = config.spriteElementPath + path.sep + "*.svg";
 	var sprite = new Sprite(config);
 
-	vfs.src(glob).pipe(build(sprite));
+	vfs.src(sprite.config.spriteElementPath).pipe(build(sprite));
 
 	function build (sprite) {
 

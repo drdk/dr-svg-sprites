@@ -1,8 +1,47 @@
 module.exports = [
 	
 	{
+		name: "spriteElementPath-string"
+	},
+	
+	{
+		name: "spriteElementPath-glob-star",
+		spriteElementPath: "./test/source/img/shapes/*le.svg"
+	},
+	
+	{
+		name: "spriteElementPath-glob-parens",
+		spriteElementPath: "./test/source/img/shapes/+(square|triangle).svg"
+	},
+	
+	{
+		name: "spriteElementPath-glob-negation",
+		spriteElementPath: ["./test/source/img/shapes/*.svg", "!./test/source/img/shapes/triangle.svg"]
+	},
+
+	{
+		name: "spritePath-file",
+		spritePath: "./tmp/spritePath-file/spritePath-file.svg"
+	},
+
+	{
+		name: "spritePath-path",
+		spritePath: "./tmp/spritePath-path/sprite"
+	},
+
+	{
 		name: "previewPath",
 		previewPath: "./tmp/previewPath/previewPath.html"
+	},
+
+	{
+		name: "cssPath-file",
+		cssPath: "./tmp/cssPath-file/cssPath-file.css"
+	},
+
+	{
+		name: "cssPath-path",
+		cssPath: "./tmp/cssPath-path/css/cssPath-path.css"
 	},
 
 	{
@@ -13,17 +52,6 @@ module.exports = [
 	{
 		name: "cssSuffix",
 		cssSuffix: "less"
-	},
-
-	{
-		name: "cssUnit",
-		cssUnit: "rem"
-	},
-
-	{
-		name: "cssUnit-cssBaseFontSize",
-		cssUnit: "rem",
-		cssBaseFontSize: 10
 	},
 
 	{
@@ -48,8 +76,39 @@ module.exports = [
 	},
 
 	{
+		name: "cssUnit-rem",
+		cssUnit: "rem"
+	},
+
+	{
+		name: "cssUnit-cssBaseFontSize-rem",
+		cssUnit: "rem",
+		cssBaseFontSize: 10
+	},
+
+	{
+		name: "cssUnit-em",
+		cssUnit: "em"
+	},
+
+	{
+		name: "cssUnit-cssBaseFontSize-em",
+		cssUnit: "em",
+		cssBaseFontSize: 10
+	},
+
+	{
 		name: "cssIncludeElementSizes",
 		cssIncludeElementSizes: false
+	},
+
+	/*
+		template
+	*/
+
+	{
+		name: "layout-horizontal",
+		layout: "horizontal"
 	},
 
 	{
@@ -60,11 +119,6 @@ module.exports = [
 	{
 		name: "layout-packed",
 		layout: "packed"
-	},
-
-	{
-		name: "layout-horizontal",
-		layout: "horizontal"
 	},
 
 	{
@@ -156,6 +210,35 @@ module.exports = [
 			small: [13, 26, 39, 52],
 			medium: [26, 39, 52, 65]
 		}
+	},
+
+	{
+		name: "svgo",
+		svgo: {
+			plugins: [
+				{ mergePaths: false },
+				{ convertTransforms: false },
+			]
+		}
+	},
+
+	{
+		name: "breakpoints-cssUnit-em",
+		cssUnit: "em",
+		breakpoints: [400, 640, 800],
+		refSize: "medium",
+		sizes: {
+			small: [13, 26, 39, 52],
+			medium: [26, 39, 52, 65]
+		}
+	},
+	/*,
+	
+	{
+		name: "spriteElementPath-spritePath-same-folder",
+		spriteElementPath: ["./test/source/img/shapes/*.svg", "!./test/source/img/shapes/sprite.svg"],
+		spritePath: "./test/source/img/shapes/sprite.svg"
 	}
+	*/
 
 ];

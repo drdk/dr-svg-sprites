@@ -17,10 +17,11 @@
 }
 
 .my_prefix-circle, .my_prefix-square, .my_prefix-triangle {
-	background-image: url("../prefix/my_prefix-prefix-sprite.png");
+	background-image: url("my_prefix-prefix-sprite.png");
+	background-repeat: no-repeat;
 	background-size: 105px 35px;
 }
 
 .svg .my_prefix-circle, .svg .my_prefix-square, .svg .my_prefix-triangle {
-	background-image: url("../prefix/my_prefix-prefix-sprite.svg");
+	background-image: url("my_prefix-prefix-sprite.svg");
 }

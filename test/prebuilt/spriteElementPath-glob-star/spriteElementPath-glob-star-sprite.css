@@ -1,0 +1,21 @@
+.circle {
+	width: 30px;
+	height: 30px;
+	background-position: 0 0;
+}
+
+.triangle {
+	width: 30px;
+	height: 26px;
+	background-position: -35px 0;
+}
+
+.circle, .triangle {
+	background-image: url("spriteElementPath-glob-star-sprite.png");
+	background-repeat: no-repeat;
+	background-size: 70px 35px;
+}
+
+.svg .circle, .svg .triangle {
+	background-image: url("spriteElementPath-glob-star-sprite.svg");
+}

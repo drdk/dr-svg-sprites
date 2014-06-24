@@ -15,7 +15,7 @@ module.exports = function (name, newPath, oldPath, callback) {
 	newPath = path.resolve(newPath);
 	oldPath = path.resolve(oldPath);
 
-	var glob = path.join(newPath, name, "*");
+	var glob = [path.join(newPath, name, "*"), "!" + path.join(newPath, name, "config.json")];
 
 	var changes = {};
   

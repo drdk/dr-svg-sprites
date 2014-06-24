@@ -17,10 +17,11 @@
 }
 
 .circle, .square, .triangle {
-	background-image: url("../layout-diagonal/layout-diagonal-sprite.png");
+	background-image: url("layout-diagonal-sprite.png");
+	background-repeat: no-repeat;
 	background-size: 105px 105px;
 }
 
 .svg .circle, .svg .square, .svg .triangle {
-	background-image: url("../layout-diagonal/layout-diagonal-sprite.svg");
+	background-image: url("layout-diagonal-sprite.svg");
 }

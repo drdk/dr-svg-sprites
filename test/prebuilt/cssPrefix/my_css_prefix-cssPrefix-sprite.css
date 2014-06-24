@@ -17,10 +17,11 @@
 }
 
 .circle, .square, .triangle {
-	background-image: url("../cssPrefix/cssPrefix-sprite.png");
+	background-image: url("cssPrefix-sprite.png");
+	background-repeat: no-repeat;
 	background-size: 105px 35px;
 }
 
 .svg .circle, .svg .square, .svg .triangle {
-	background-image: url("../cssPrefix/cssPrefix-sprite.svg");
+	background-image: url("cssPrefix-sprite.svg");
 }

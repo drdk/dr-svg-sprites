@@ -17,7 +17,8 @@
 }
 
 .square-small, .circle-small, .triangle-small {
-	background-image: url("../refSize-number/refSize-number-sprite-small.png");
+	background-image: url("refSize-number-sprite-small.png");
+	background-repeat: no-repeat;
 	background-size: 46px 16px;
 }
 
@@ -40,10 +41,11 @@
 }
 
 .square-large, .circle-large, .triangle-large {
-	background-image: url("../refSize-number/refSize-number-sprite-large.png");
+	background-image: url("refSize-number-sprite-large.png");
+	background-repeat: no-repeat;
 	background-size: 138px 48px;
 }
 
 .svg .square-small, .svg .circle-small, .svg .triangle-small, .svg .square-large, .svg .circle-large, .svg .triangle-large {
-	background-image: url("../refSize-number/refSize-number-sprite.svg");
+	background-image: url("refSize-number-sprite.svg");
 }

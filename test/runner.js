@@ -5,12 +5,13 @@ var async = require("async");
 var builder = require("../index");
 var tests = require("../test/tests").slice();
 var differ = require("../test/differ");
+var util = require("../lib/util");
 
 var newPath = path.normalize("./tmp/");
 var oldPath = path.normalize("./test/prebuilt/");
 
 var defaults = {
-	spriteElementPath: "./test/source/img/shapes"
+	spriteElementPath: "./test/source/img/shapes/"
 };
 
 var testsToRun = process.argv.slice(2).map(function (name) {
@@ -44,19 +45,25 @@ function diffTest (options, callback) {
 
 function buildTest (options, callback) {
 	
-	var _options = _.clone(options, true);
+	var _options = _.clone(defaults, true);
 
-	_.assign(_options, defaults);
+	_.assign(_options, options);
+	
+	var root = path.join(newPath, _options.name);
 
-	if (!("spritePath" in _options) && !("cssPath" in _options)) {
-		var root = path.join(newPath, _options.name);
-		_options.spritePath = root;
-		_options.cssPath = root;
+	if (!("spritePath" in _options)) {
+		_options.spritePath = root + path.sep;
+	}
+
+	if (!("cssPath" in _options)) {
+		_options.cssPath = root + path.sep;
 	}
 
 	if (!("previewPath" in _options)) {
 		_options.previewPath = path.join(root, "index.html");
 	}
+
+
 
 	builder(_options, function (err, result) {
 		console.log("Built", _options.name);

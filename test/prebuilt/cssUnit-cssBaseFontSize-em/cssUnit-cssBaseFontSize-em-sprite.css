@@ -1,0 +1,27 @@
+.circle {
+	width: 3em;
+	height: 3em;
+	background-position: 0 0;
+}
+
+.square {
+	width: 2.6em;
+	height: 2.6em;
+	background-position: -3.5em 0;
+}
+
+.triangle {
+	width: 3em;
+	height: 2.6em;
+	background-position: -7em 0;
+}
+
+.circle, .square, .triangle {
+	background-image: url("cssUnit-cssBaseFontSize-em-sprite.png");
+	background-repeat: no-repeat;
+	background-size: 10.5em 3.5em;
+}
+
+.svg .circle, .svg .square, .svg .triangle {
+	background-image: url("cssUnit-cssBaseFontSize-em-sprite.svg");
+}

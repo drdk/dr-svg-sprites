@@ -63,9 +63,9 @@ Optional
 Used when automatically building stylesheet and image filenames.
 
 #### options.spriteElementPath
-Type: `String`
+Type: `String` or glob pattern
 
-The base path of the elements to be sprited.
+Either the path a fodler containing the elements - or a glob pattern (string or array of strings) that matches the elements - to be sprited.
 
 #### options.spritePath
 Type: `String`

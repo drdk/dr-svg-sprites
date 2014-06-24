@@ -17,10 +17,11 @@
 }
 
 .sphere, .cube, .pyramid {
-	background-image: url("../map-object/map-object-sprite.png");
+	background-image: url("map-object-sprite.png");
+	background-repeat: no-repeat;
 	background-size: 105px 35px;
 }
 
 .svg .sphere, .svg .cube, .svg .pyramid {
-	background-image: url("../map-object/map-object-sprite.svg");
+	background-image: url("map-object-sprite.svg");
 }

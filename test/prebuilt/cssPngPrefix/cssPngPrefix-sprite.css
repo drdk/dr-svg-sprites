@@ -17,7 +17,7 @@
 }
 
 .circle, .square, .triangle {
-	background-size:  ;
+	background-size: 105px 35px;
 }
 
 .supports-png .circle, .supports-png .square, .supports-png .triangle {

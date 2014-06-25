@@ -2,6 +2,11 @@
 
 > Create SVG sprites with PNG fallbacks at needed sizes
 
+* [Usage](#usage)
+* [Options](#options)
+* [Changelog](#changelog)
+* [Contributing](CONTRIBUTING.md)
+
 ### Usage
 
 Minimal:
@@ -78,6 +83,7 @@ would yield the following files:
 - [options.breakpoints](#optionsbreakpoints)
 - [options.baseQuery](#optionsbasequery)
 - [options.svgo](#optionssvgo)
+- [options.svgAttributes](#optionssvgattributes)
 
 
 #### options.name
@@ -322,74 +328,33 @@ var options = {
 }
 ```
 
----
+#### options.svgAttributes
+Type: `Object`
+Optional
 
-## Contributing
-
-Pull request for bug-fixes/features are welcome - though I will reserve judgement on what actually goes in ;)
-
-New features should be accompanied by [tests](#testing).
-
-### Code style
-
-Basically you should just try to follow the general style of the existing code.
-
-**Do's:**
-
-* Tabs for indentation, spaces for alignment.
-* Separate var-statements when also assigning values.
-* Semicolons.
-
-**Dont's:**
-
-* Single-line if/else-statements.
-* Pad parens with spaces.
-* Comma-first.
+This options let's you customise the attributes on the root svg tag in the sprite. 
+Attributes with falsy values (`false`, `null`, `0` etc) will be omitted from the ouput. 
+`viewBox`, `width`, `height` and xml namespaces are all handled automatically - no need to add them here.
 
 ```js
-var style = {
-	comma: "last",
-	useTabs: true,
-	semicolons: true
-};
-var useTabs = false;
-var comma, semicolons;
-
-if (!useTabs) {
-	useTabs = style.useTabs;
-}
-
-comma = style.comma;
-semicolons = style.semicolons;
-
-if (comma === "last" && useTabs && semicolons) {
-	console.log("Thumbs up!");
+var options = {
+	// some options
+	svgAttributes: {
+		version: "1.0",
+		preserveAspectRatio: "xMaxYMax meet"
+	},
+	// more options
 }
 ```
 
+The default attributes values are:
 
-### Testing
-
-Testing consists of building a suite of test sprites (configs defined in `test/tests.js`) to a tmp folder. The generated files are then diffed against the corresponding files in `test/prebuilt`.
-Any changes are logged to the console either as just `changed` (png) or as full patch-style output (svg, html, css etc).
-When changes have been vetted any valid changes should be moved to `test/prebuilt` and commited.  
-
-The full test suite can be run in a console with:
-
-```
-npm test
-```
-
-or
-
-```
-node test/runner.js
-```
-
-Specific tests can be run by supplying the names of the tests as additional arguments:
-
-```
-node test/runner.js map-object map-function
+```js
+svgAttributes: {
+	baseProfile: "tiny",
+	xmlns: "http://www.w3.org/2000/svg",
+	preserveAspectRatio: "xMinYMin meet"
+}
 ```
 
 ---
@@ -401,10 +366,12 @@ node test/runner.js map-object map-function
 Features:
 
 * `options.svgo` added.
+* `options.svgAttributes` added.
 
 Changes:
 
 * `options.spriteElementPath` now also supports glob patterns.
+* SVG namespaces are included automatically if used.
 * Added tests.
 
 ### 0.9.5

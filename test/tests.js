@@ -224,6 +224,15 @@ module.exports = [
 	},
 
 	{
+		name: "svgAttributes",
+		svgAttributes: {
+			version: "1.0",
+			baseProfile: null,
+			preserveAspectRatio: "xMaxYMax meet"
+		}
+	},
+
+	{
 		name: "breakpoints-cssUnit-em",
 		cssUnit: "em",
 		breakpoints: [400, 640, 800],

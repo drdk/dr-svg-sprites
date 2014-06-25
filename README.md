@@ -240,7 +240,7 @@ Optional
 
 Defines the basic size of your source svg-elements. All other sizes will be calculated relating to this. It can either be a key from the `sizes` option (which refers to a number) or just a raw number.
 
-![Source elements and refSize](https://raw.github.com/drdk/grunt-dr-svg-sprites/master/docs/img/docs-source-elements.png)
+![Source elements and refSize](https://raw.github.com/drdk/dr-svg-sprites/master/img/docs-source-elements.png)
 
 Notice how one source element is bigger than the `refSize`; this ok - as every element is scaled proportionally.
 
@@ -262,7 +262,7 @@ var options = {
 };
 ```
 
-![sizes](https://raw.github.com/drdk/grunt-dr-svg-sprites/master/docs/img/docs-sprite-sizes.png)
+![sizes](https://raw.github.com/drdk/dr-svg-sprites/master/img/docs-sprite-sizes.png)
 
 1 SVG sprite is generated and 2 PNG sprites (1 per defined size).
 

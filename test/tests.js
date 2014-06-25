@@ -218,6 +218,7 @@ module.exports = [
 			plugins: [
 				{ mergePaths: false },
 				{ convertTransforms: false },
+				{ cleanupIDs: false }
 			]
 		}
 	},

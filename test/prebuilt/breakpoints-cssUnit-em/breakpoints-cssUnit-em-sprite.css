@@ -13,13 +13,13 @@
 .triangle-small {
 	width: 0.9375em;
 	height: 0.8125em;
-	background-position: -1.8125em 0;
+	background-position: -1.875em 0;
 }
 
 .square-small, .circle-small, .triangle-small {
 	background-image: url("breakpoints-cssUnit-em-sprite-small.png");
 	background-repeat: no-repeat;
-	background-size: 2.8125em 1em;
+	background-size: 2.875em 1em;
 }
 
 @media only screen and (min-width: 400px) {
@@ -33,17 +33,17 @@
 	.circle-small {
 		width: 1.875em;
 		height: 1.875em;
-		background-position: -1.6875em 0;
+		background-position: -1.75em 0;
 	}
 	
 	.triangle-small {
 		width: 1.875em;
 		height: 1.625em;
-		background-position: -3.625em 0;
+		background-position: -3.75em 0;
 	}
 	
 	.square-small, .circle-small, .triangle-small {
-		background-size: 5.5625em 1.9375em;
+		background-size: 5.75em 2em;
 	}
 
 }
@@ -59,17 +59,17 @@
 	.circle-small {
 		width: 2.8125em;
 		height: 2.8125em;
-		background-position: -2.5625em 0;
+		background-position: -2.625em 0;
 	}
 	
 	.triangle-small {
 		width: 2.8125em;
 		height: 2.4375em;
-		background-position: -5.4375em 0;
+		background-position: -5.625em 0;
 	}
 	
 	.square-small, .circle-small, .triangle-small {
-		background-size: 8.375em 2.9375em;
+		background-size: 8.625em 3em;
 	}
 
 }
@@ -85,17 +85,17 @@
 	.circle-small {
 		width: 3.75em;
 		height: 3.75em;
-		background-position: -3.375em 0;
+		background-position: -3.5em 0;
 	}
 	
 	.triangle-small {
 		width: 3.75em;
 		height: 3.25em;
-		background-position: -7.25em 0;
+		background-position: -7.5em 0;
 	}
 	
 	.square-small, .circle-small, .triangle-small {
-		background-size: 11.125em 3.875em;
+		background-size: 11.5em 4em;
 	}
 
 }
@@ -109,19 +109,19 @@
 .circle-medium {
 	width: 1.875em;
 	height: 1.875em;
-	background-position: -1.6875em 0;
+	background-position: -1.75em 0;
 }
 
 .triangle-medium {
 	width: 1.875em;
 	height: 1.625em;
-	background-position: -3.625em 0;
+	background-position: -3.75em 0;
 }
 
 .square-medium, .circle-medium, .triangle-medium {
 	background-image: url("breakpoints-cssUnit-em-sprite-medium.png");
 	background-repeat: no-repeat;
-	background-size: 5.5625em 1.9375em;
+	background-size: 5.75em 2em;
 }
 
 @media only screen and (min-width: 400px) {
@@ -135,17 +135,17 @@
 	.circle-medium {
 		width: 2.8125em;
 		height: 2.8125em;
-		background-position: -2.5625em 0;
+		background-position: -2.625em 0;
 	}
 	
 	.triangle-medium {
 		width: 2.8125em;
 		height: 2.4375em;
-		background-position: -5.4375em 0;
+		background-position: -5.625em 0;
 	}
 	
 	.square-medium, .circle-medium, .triangle-medium {
-		background-size: 8.375em 2.9375em;
+		background-size: 8.625em 3em;
 	}
 
 }
@@ -161,17 +161,17 @@
 	.circle-medium {
 		width: 3.75em;
 		height: 3.75em;
-		background-position: -3.375em 0;
+		background-position: -3.5em 0;
 	}
 	
 	.triangle-medium {
 		width: 3.75em;
 		height: 3.25em;
-		background-position: -7.25em 0;
+		background-position: -7.5em 0;
 	}
 	
 	.square-medium, .circle-medium, .triangle-medium {
-		background-size: 11.125em 3.875em;
+		background-size: 11.5em 4em;
 	}
 
 }
@@ -187,17 +187,17 @@
 	.circle-medium {
 		width: 4.6875em;
 		height: 4.6875em;
-		background-position: -4.25em 0;
+		background-position: -4.375em 0;
 	}
 	
 	.triangle-medium {
 		width: 4.6875em;
 		height: 4.0625em;
-		background-position: -9.0625em 0;
+		background-position: -9.375em 0;
 	}
 	
 	.square-medium, .circle-medium, .triangle-medium {
-		background-size: 13.9375em 4.875em;
+		background-size: 14.375em 5em;
 	}
 
 }

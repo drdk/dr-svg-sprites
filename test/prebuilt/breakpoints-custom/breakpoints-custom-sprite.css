@@ -13,13 +13,13 @@
 .triangle-small {
 	width: 15px;
 	height: 13px;
-	background-position: -29px 0;
+	background-position: -30px 0;
 }
 
 .square-small, .circle-small, .triangle-small {
 	background-image: url("breakpoints-custom-sprite-small.png");
 	background-repeat: no-repeat;
-	background-size: 45px 16px;
+	background-size: 46px 16px;
 }
 
 @media only screen and (min-width: 30.0625em) and (max-width: 60em) {
@@ -33,17 +33,17 @@
 	.circle-small {
 		width: 30px;
 		height: 30px;
-		background-position: -27px 0;
+		background-position: -28px 0;
 	}
 	
 	.triangle-small {
 		width: 30px;
 		height: 26px;
-		background-position: -58px 0;
+		background-position: -60px 0;
 	}
 	
 	.square-small, .circle-small, .triangle-small {
-		background-size: 89px 31px;
+		background-size: 92px 32px;
 	}
 
 }
@@ -59,17 +59,17 @@
 	.circle-small {
 		width: 45px;
 		height: 45px;
-		background-position: -41px 0;
+		background-position: -42px 0;
 	}
 	
 	.triangle-small {
 		width: 45px;
 		height: 39px;
-		background-position: -87px 0;
+		background-position: -90px 0;
 	}
 	
 	.square-small, .circle-small, .triangle-small {
-		background-size: 134px 47px;
+		background-size: 138px 48px;
 	}
 
 }
@@ -85,17 +85,17 @@
 	.circle-small {
 		width: 60px;
 		height: 60px;
-		background-position: -54px 0;
+		background-position: -56px 0;
 	}
 	
 	.triangle-small {
 		width: 60px;
 		height: 52px;
-		background-position: -116px 0;
+		background-position: -120px 0;
 	}
 	
 	.square-small, .circle-small, .triangle-small {
-		background-size: 178px 62px;
+		background-size: 184px 64px;
 	}
 
 }
@@ -109,19 +109,19 @@
 .circle-medium {
 	width: 30px;
 	height: 30px;
-	background-position: -27px 0;
+	background-position: -28px 0;
 }
 
 .triangle-medium {
 	width: 30px;
 	height: 26px;
-	background-position: -58px 0;
+	background-position: -60px 0;
 }
 
 .square-medium, .circle-medium, .triangle-medium {
 	background-image: url("breakpoints-custom-sprite-medium.png");
 	background-repeat: no-repeat;
-	background-size: 89px 31px;
+	background-size: 92px 32px;
 }
 
 @media only screen and (min-width: 30.0625em) and (max-width: 60em) {
@@ -135,17 +135,17 @@
 	.circle-medium {
 		width: 45px;
 		height: 45px;
-		background-position: -41px 0;
+		background-position: -42px 0;
 	}
 	
 	.triangle-medium {
 		width: 45px;
 		height: 39px;
-		background-position: -87px 0;
+		background-position: -90px 0;
 	}
 	
 	.square-medium, .circle-medium, .triangle-medium {
-		background-size: 134px 47px;
+		background-size: 138px 48px;
 	}
 
 }
@@ -161,17 +161,17 @@
 	.circle-medium {
 		width: 60px;
 		height: 60px;
-		background-position: -54px 0;
+		background-position: -56px 0;
 	}
 	
 	.triangle-medium {
 		width: 60px;
 		height: 52px;
-		background-position: -116px 0;
+		background-position: -120px 0;
 	}
 	
 	.square-medium, .circle-medium, .triangle-medium {
-		background-size: 178px 62px;
+		background-size: 184px 64px;
 	}
 
 }
@@ -187,17 +187,17 @@
 	.circle-medium {
 		width: 75px;
 		height: 75px;
-		background-position: -68px 0;
+		background-position: -70px 0;
 	}
 	
 	.triangle-medium {
 		width: 75px;
 		height: 65px;
-		background-position: -145px 0;
+		background-position: -150px 0;
 	}
 	
 	.square-medium, .circle-medium, .triangle-medium {
-		background-size: 223px 78px;
+		background-size: 230px 80px;
 	}
 
 }

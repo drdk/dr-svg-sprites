@@ -164,6 +164,13 @@ Optional
 
 Defines a prefix for selectors to target png sprites. 
 
+**Note:** If both `options.cssSvgPrefix` and `options.cssPngPrefix` are empty strings a multiple-background progressive enhancement is used:
+
+```css
+	background-image: url("my-sprite.png");
+	background-image: url("my-sprite.svg"), none;
+```
+Mentioned on CSS-Tricks: [Using SVG](http://css-tricks.com/using-svg/).
 
 #### options.cssUnit
 Type: `String`
@@ -360,6 +367,12 @@ svgAttributes: {
 ---
 
 ## Changelog
+
+### 0.9.10
+
+Changes
+
+* Added solutions for when `options.cssSvgPrefix` and `options.cssPngPrefix` are empty strings.
 
 ### 0.9.7
 

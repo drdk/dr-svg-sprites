@@ -77,7 +77,6 @@ module.exports = [
 
 	{
 		name: "cssPngPrefix-cssSvgPrefix-blank",
-		cssPngPrefix: "",
 		cssSvgPrefix: ""
 	},
 

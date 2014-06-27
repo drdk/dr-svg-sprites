@@ -17,9 +17,9 @@
 }
 
 .sphere, .cube, .pyramid {
-	background-image: url("map-object-sprite.png");
-	background-repeat: no-repeat;
 	background-size: 105px 35px;
+	background-repeat: no-repeat;
+	background-image: url("map-object-sprite.png");
 }
 
 .svg .sphere, .svg .cube, .svg .pyramid {

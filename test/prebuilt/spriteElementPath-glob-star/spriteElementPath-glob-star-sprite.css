@@ -11,9 +11,9 @@
 }
 
 .circle, .triangle {
-	background-image: url("spriteElementPath-glob-star-sprite.png");
-	background-repeat: no-repeat;
 	background-size: 70px 35px;
+	background-repeat: no-repeat;
+	background-image: url("spriteElementPath-glob-star-sprite.png");
 }
 
 .svg .circle, .svg .triangle {

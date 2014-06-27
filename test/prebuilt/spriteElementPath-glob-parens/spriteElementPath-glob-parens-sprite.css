@@ -11,9 +11,9 @@
 }
 
 .square, .triangle {
-	background-image: url("spriteElementPath-glob-parens-sprite.png");
-	background-repeat: no-repeat;
 	background-size: 70px 35px;
+	background-repeat: no-repeat;
+	background-image: url("spriteElementPath-glob-parens-sprite.png");
 }
 
 .svg .square, .svg .triangle {

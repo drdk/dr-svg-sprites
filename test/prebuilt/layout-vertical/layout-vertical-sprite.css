@@ -17,9 +17,9 @@
 }
 
 .circle, .square, .triangle {
-	background-image: url("layout-vertical-sprite.png");
-	background-repeat: no-repeat;
 	background-size: 35px 105px;
+	background-repeat: no-repeat;
+	background-image: url("layout-vertical-sprite.png");
 }
 
 .svg .circle, .svg .square, .svg .triangle {

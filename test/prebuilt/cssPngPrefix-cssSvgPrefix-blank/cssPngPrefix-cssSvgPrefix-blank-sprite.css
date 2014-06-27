@@ -19,9 +19,7 @@
 .circle, .square, .triangle {
 	background-size: 105px 35px;
 	background-repeat: no-repeat;
-	background-image: url("spritePath-file.png");
+	background-image: url("cssPngPrefix-cssSvgPrefix-blank-sprite.png");
+	background-image: url("cssPngPrefix-cssSvgPrefix-blank-sprite.svg"), none;
 }
 
-.svg .circle, .svg .square, .svg .triangle {
-	background-image: url("spritePath-file.svg");
-}

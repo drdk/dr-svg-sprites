@@ -17,9 +17,9 @@
 }
 
 .square-small, .circle-small, .triangle-small {
-	background-image: url("breakpoints-custom-sprite-small.png");
-	background-repeat: no-repeat;
 	background-size: 46px 16px;
+	background-repeat: no-repeat;
+	background-image: url("breakpoints-custom-sprite-small.png");
 }
 
 @media only screen and (min-width: 30.0625em) and (max-width: 60em) {
@@ -119,9 +119,9 @@
 }
 
 .square-medium, .circle-medium, .triangle-medium {
-	background-image: url("breakpoints-custom-sprite-medium.png");
-	background-repeat: no-repeat;
 	background-size: 92px 32px;
+	background-repeat: no-repeat;
+	background-image: url("breakpoints-custom-sprite-medium.png");
 }
 
 @media only screen and (min-width: 30.0625em) and (max-width: 60em) {

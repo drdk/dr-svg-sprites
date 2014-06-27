@@ -17,9 +17,9 @@
 }
 
 .square-small, .circle-small, .triangle-small {
-	background-image: url("baseQuery-sprite-small.png");
-	background-repeat: no-repeat;
 	background-size: 46px 16px;
+	background-repeat: no-repeat;
+	background-image: url("baseQuery-sprite-small.png");
 }
 
 @media only screen and (orientation:portrait) and (min-width: 400px) {
@@ -119,9 +119,9 @@
 }
 
 .square-medium, .circle-medium, .triangle-medium {
-	background-image: url("baseQuery-sprite-medium.png");
-	background-repeat: no-repeat;
 	background-size: 92px 32px;
+	background-repeat: no-repeat;
+	background-image: url("baseQuery-sprite-medium.png");
 }
 
 @media only screen and (orientation:portrait) and (min-width: 400px) {

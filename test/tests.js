@@ -76,6 +76,12 @@ module.exports = [
 	},
 
 	{
+		name: "cssPngPrefix-cssSvgPrefix-blank",
+		cssPngPrefix: "",
+		cssSvgPrefix: ""
+	},
+
+	{
 		name: "cssUnit-rem",
 		cssUnit: "rem"
 	},

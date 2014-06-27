@@ -17,9 +17,9 @@
 }
 
 .elcric, .erauqs, .elgnairt {
-	background-image: url("map-function-sprite.png");
-	background-repeat: no-repeat;
 	background-size: 105px 35px;
+	background-repeat: no-repeat;
+	background-image: url("map-function-sprite.png");
 }
 
 .svg .elcric, .svg .erauqs, .svg .elgnairt {

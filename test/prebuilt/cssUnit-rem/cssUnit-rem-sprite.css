@@ -17,9 +17,9 @@
 }
 
 .circle, .square, .triangle {
-	background-image: url("cssUnit-rem-sprite.png");
-	background-repeat: no-repeat;
 	background-size: 6.5625rem 2.1875rem;
+	background-repeat: no-repeat;
+	background-image: url("cssUnit-rem-sprite.png");
 }
 
 .svg .circle, .svg .square, .svg .triangle {

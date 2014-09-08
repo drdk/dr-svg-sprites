@@ -1,15 +1,15 @@
-{{~#sizes~}}
-{{~#items~}}
+{{#sizes}}
+{{#items}}
 {{className}} {
-{{~#if ../../config/cssIncludeElementSizes}}
+{{#if ../../config/cssIncludeElementSizes}}
 	width: {{unit width ../../../config/cssUnit ../../../config/cssBaseFontSize}};
 	height: {{unit height ../../../config/cssUnit ../../../config/cssBaseFontSize}};
-{{~/if}}
+{{/if}}
 	background-position: {{unit x ../../config/cssUnit ../../config/cssBaseFontSize -1}} {{unit y ../../config/cssUnit ../../config/cssBaseFontSize -1}};
 }
 
-{{/items~}}
-{{~#if ../config/cssPngPrefix~}}
+{{/items}}
+{{#if ../config/cssPngPrefix}}
 {{prefix items ""}} {
 	background-size: {{unit width ../../config/cssUnit ../../config/cssBaseFontSize}} {{unit height ../../config/cssUnit ../../config/cssBaseFontSize}};
 }
@@ -18,29 +18,29 @@
 	background-image: url("{{url pngPath ../../cssPath}}");
 }
 
-{{else~}}
+{{else}}
 {{prefix items ""}} {
 	background-size: {{unit width ../../config/cssUnit ../../config/cssBaseFontSize}} {{unit height ../../config/cssUnit ../../config/cssBaseFontSize}};
 	background-repeat: no-repeat;
 	background-image: url("{{url pngPath ../../cssPath}}");
-	{{~#unless ../../config/cssSvgPrefix}}
+	{{#unless ../../config/cssSvgPrefix}}
 	background-image: url("{{url ../../../svgPath ../../../cssPath}}"), none;
-	{{~/unless}}
+	{{/unless}}
 }
 
-{{/if~}}
-{{~#breakpoints~}}
+{{/if}}
+{{#breakpoints}}
 {{query}} {
-	{{~#items}}
+	{{#items}}
 	
 	{{className}} {
-	{{~#if ../../../config/cssIncludeElementSizes}}
+	{{#if ../../../config/cssIncludeElementSizes}}
 		width: {{unit width ../../../../config/cssUnit ../../../../config/cssBaseFontSize}};
 		height: {{unit height ../../../../config/cssUnit ../../../../config/cssBaseFontSize}};
-	{{~/if}}
+	{{/if}}
 		background-position: {{unit x ../../../config/cssUnit ../../../config/cssBaseFontSize -1}} {{unit y ../../../config/cssUnit ../../../config/cssBaseFontSize -1}};
 	}
-	{{~/items}}
+	{{/items}}
 	
 	{{prefix items ""}} {
 		background-size: {{unit width ../../config/cssUnit ../../config/cssBaseFontSize}} {{unit height ../../config/cssUnit ../../config/cssBaseFontSize}};
@@ -48,16 +48,16 @@
 
 }
 
-{{/breakpoints~}}
-{{~/sizes~}}
-{{~#if config/cssPngPrefix~}}
-{{prefixAll sizes ../config/cssSvgPrefix}} {
+{{/breakpoints}}
+{{/sizes}}
+{{#if config/cssPngPrefix}}
+{{prefixAll ../sizes ../config/cssSvgPrefix}} {
 	background-image: url("{{url ../svgPath ../cssPath}}");
 }
-{{~else~}}
-{{~#if config/cssSvgPrefix~}}
-{{prefixAll sizes ../config/cssSvgPrefix}} {
+{{else}}
+{{#if config/cssSvgPrefix}}
+{{prefixAll ../../sizes ../config/cssSvgPrefix}} {
 	background-image: url("{{url ../svgPath ../cssPath}}");
 }
-{{~/if~}}
-{{~/if~}}
+{{/if}}
+{{/if}}

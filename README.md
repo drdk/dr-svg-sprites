@@ -74,6 +74,7 @@ would yield the following files:
 - [options.cssUnit](#optionscssunit)
 - [options.cssBaseFontSize](#optionscssbasefontsize)
 - [options.cssIncludeElementSizes](#optionscssincludeelementsizes)
+- [options.selector](#optionsselector)
 - [options.template](#optionstemplate)
 - [options.layout](#optionslayout)
 - [options.map](#optionsmap)
@@ -193,6 +194,36 @@ Default value: `true`
 Optional
 
 If set to `false` `width` and `height` for the svg elements will be omitted from the stylesheet. Useful in combination with a `options.layout` of `"alt-diagonal"`.
+
+
+#### options.selector
+Type: `Function`
+Optional
+
+Can be used to customize selectors to support more advanced selector structure and states (like `:hover` and `:active`).
+
+The function is passed the following arguments:
+
+- `filename`: The svg element basename, e.g. `./svg-images/foo.svg` -> `foo`.
+- `tokens`: An object containing tokens that you might want to use in the selector. The following keys will be exposed:
+  - `prefix`: `options.prefix` if used.
+  - `size`: If `options.sizes` is used this is the current label.
+
+The default function returns a classname consisting of the svg element basenames (filename without extension) prepended with `options.prefix` if set and appended with a size label from `options.sizes` if used. E.g. filename: `foo`, prefix: `my`, size: `large` -> `.my-foo-large`.
+
+This is what the default function looks like for reference:
+```js
+		selector: function (filename, tokens) {
+			var parts = [filename];
+			if (tokens.prefix) {
+				parts.unshift(tokens.prefix);
+			}
+			if (tokens.size) {
+				parts.push(tokens.size);
+			}
+			return "." + parts.join("-");
+		},
+```
 
 #### options.template
 Type: `String`
@@ -373,6 +404,12 @@ svgAttributes: {
 ---
 
 ## Changelog
+
+### 0.9.13
+
+Features:
+
+* `options.selector` added.
 
 ### 0.9.10
 

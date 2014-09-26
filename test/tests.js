@@ -107,6 +107,22 @@ module.exports = [
 		cssIncludeElementSizes: false
 	},
 
+	{
+		name: "selector-advanced",
+		spriteElementPath: "./test/source/img/shapes-with-state/*.svg",
+		previewPath: null,
+		selector: function (filename, tokens) {
+			var parts = filename.split("_");
+			var state = (parts.length === 2) ? ":" + parts[1] : "";
+			return "button" + state + " > ." + parts[0];
+		},
+		refSize: "medium",
+		sizes: {
+			small: [13],
+			medium: [26]
+		}
+	},
+
 	/*
 		template
 	*/

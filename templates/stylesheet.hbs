@@ -1,6 +1,6 @@
 {{#sizes}}
 {{#items}}
-{{className}} {
+{{{selector}}} {
 {{#if ../../config/cssIncludeElementSizes}}
 	width: {{unit width ../../../config/cssUnit ../../../config/cssBaseFontSize}};
 	height: {{unit height ../../../config/cssUnit ../../../config/cssBaseFontSize}};
@@ -10,16 +10,16 @@
 
 {{/items}}
 {{#if ../config/cssPngPrefix}}
-{{prefix items ""}} {
+{{{prefix items ""}}} {
 	background-size: {{unit width ../../config/cssUnit ../../config/cssBaseFontSize}} {{unit height ../../config/cssUnit ../../config/cssBaseFontSize}};
 }
 
-{{prefix items ../../config/cssPngPrefix}} {
+{{{prefix items ../../config/cssPngPrefix}}} {
 	background-image: url("{{url pngPath ../../cssPath}}");
 }
 
 {{else}}
-{{prefix items ""}} {
+{{{prefix items ""}}} {
 	background-size: {{unit width ../../config/cssUnit ../../config/cssBaseFontSize}} {{unit height ../../config/cssUnit ../../config/cssBaseFontSize}};
 	background-repeat: no-repeat;
 	background-image: url("{{url pngPath ../../cssPath}}");
@@ -33,7 +33,7 @@
 {{query}} {
 	{{#items}}
 	
-	{{className}} {
+	{{{selector}}} {
 	{{#if ../../../config/cssIncludeElementSizes}}
 		width: {{unit width ../../../../config/cssUnit ../../../../config/cssBaseFontSize}};
 		height: {{unit height ../../../../config/cssUnit ../../../../config/cssBaseFontSize}};
@@ -42,7 +42,7 @@
 	}
 	{{/items}}
 	
-	{{prefix items ""}} {
+	{{{prefix items ""}}} {
 		background-size: {{unit width ../../config/cssUnit ../../config/cssBaseFontSize}} {{unit height ../../config/cssUnit ../../config/cssBaseFontSize}};
 	}
 
@@ -51,12 +51,12 @@
 {{/breakpoints}}
 {{/sizes}}
 {{#if config/cssPngPrefix}}
-{{prefixAll ../sizes ../config/cssSvgPrefix}} {
+{{{prefixAll ../sizes ../config/cssSvgPrefix}}} {
 	background-image: url("{{url ../svgPath ../cssPath}}");
 }
 {{else}}
 {{#if config/cssSvgPrefix}}
-{{prefixAll ../../sizes ../config/cssSvgPrefix}} {
+{{{prefixAll ../../sizes ../config/cssSvgPrefix}}} {
 	background-image: url("{{url ../svgPath ../cssPath}}");
 }
 {{/if}}

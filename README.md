@@ -97,7 +97,7 @@ Used when automatically building stylesheet and image filenames.
 #### options.spriteElementPath
 Type: `String` or glob pattern
 
-Either the path a fodler containing the elements - or a glob pattern (string or array of strings) that matches the elements - to be sprited.
+Either the path a folder containing the elements - or a glob pattern (string or array of strings) that matches the elements - to be sprited.
 
 #### options.spritePath
 Type: `String`
@@ -367,6 +367,8 @@ var options = {
 }
 ```
 
+Per default the following plugins are disabled: `moveGroupAttrsToElems`,  `collapseGroups`,  `removeUselessStrokeAndFill`.
+
 #### options.svgAttributes
 Type: `Object`
 Optional
@@ -399,6 +401,13 @@ svgAttributes: {
 ---
 
 ## Changelog
+
+
+### 0.9.14
+
+Changes
+
+* Added defaults for `options.svgo`.
 
 ### 0.9.13
 

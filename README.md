@@ -367,7 +367,7 @@ var options = {
 }
 ```
 
-Per default the following plugins are disabled: `moveGroupAttrsToElems`,  `collapseGroups`,  `removeUselessStrokeAndFill`.
+Per default the following plugins are disabled: `moveGroupAttrsToElems`,  `collapseGroups` and `removeUselessStrokeAndFill`.
 
 #### options.svgAttributes
 Type: `Object`

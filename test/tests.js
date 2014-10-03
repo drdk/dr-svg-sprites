@@ -262,14 +262,6 @@ module.exports = [
 			small: [13, 26, 39, 52],
 			medium: [26, 39, 52, 65]
 		}
-	},
-	/*,
-	
-	{
-		name: "spriteElementPath-spritePath-same-folder",
-		spriteElementPath: ["./test/source/img/shapes/*.svg", "!./test/source/img/shapes/sprite.svg"],
-		spritePath: "./test/source/img/shapes/sprite.svg"
 	}
-	*/
 
 ];

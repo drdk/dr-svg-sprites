@@ -403,6 +403,13 @@ svgAttributes: {
 ## Changelog
 
 
+### 0.9.15
+
+Changes
+
+* Using `npm shrinkwrap` to avoid surprises via dependencies.
+
+
 ### 0.9.14
 
 Changes

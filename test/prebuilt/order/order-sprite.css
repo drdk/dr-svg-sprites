@@ -1,0 +1,69 @@
+.0 {
+	width: 50px;
+	height: 70px;
+	background-position: 0 0;
+}
+
+.1 {
+	width: 50px;
+	height: 70px;
+	background-position: -51px 0;
+}
+
+.2 {
+	width: 50px;
+	height: 70px;
+	background-position: -102px 0;
+}
+
+.3 {
+	width: 50px;
+	height: 70px;
+	background-position: -153px 0;
+}
+
+.4 {
+	width: 50px;
+	height: 70px;
+	background-position: -204px 0;
+}
+
+.5 {
+	width: 50px;
+	height: 70px;
+	background-position: -255px 0;
+}
+
+.6 {
+	width: 50px;
+	height: 70px;
+	background-position: -306px 0;
+}
+
+.7 {
+	width: 50px;
+	height: 70px;
+	background-position: -357px 0;
+}
+
+.8 {
+	width: 50px;
+	height: 70px;
+	background-position: -408px 0;
+}
+
+.9 {
+	width: 50px;
+	height: 70px;
+	background-position: -459px 0;
+}
+
+.0, .1, .2, .3, .4, .5, .6, .7, .8, .9 {
+	background-size: 510px 71px;
+	background-repeat: no-repeat;
+	background-image: url("order-sprite.png");
+}
+
+.svg .0, .svg .1, .svg .2, .svg .3, .svg .4, .svg .5, .svg .6, .svg .7, .svg .8, .svg .9 {
+	background-image: url("order-sprite.svg");
+}

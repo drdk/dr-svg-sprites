@@ -262,6 +262,13 @@ module.exports = [
 			small: [13, 26, 39, 52],
 			medium: [26, 39, 52, 65]
 		}
+	},
+	
+	{
+		name: "order",
+		spriteElementPath: "./test/source/img/numbers/*.svg",
+		refSize: 700,
+		sizes: {"": 70}
 	}
 
 ];

@@ -1,69 +1,69 @@
-.0 {
+.num-0 {
 	width: 50px;
 	height: 70px;
 	background-position: 0 0;
 }
 
-.1 {
+.num-1 {
 	width: 50px;
 	height: 70px;
 	background-position: -51px 0;
 }
 
-.2 {
+.num-2 {
 	width: 50px;
 	height: 70px;
 	background-position: -102px 0;
 }
 
-.3 {
+.num-3 {
 	width: 50px;
 	height: 70px;
 	background-position: -153px 0;
 }
 
-.4 {
+.num-4 {
 	width: 50px;
 	height: 70px;
 	background-position: -204px 0;
 }
 
-.5 {
+.num-5 {
 	width: 50px;
 	height: 70px;
 	background-position: -255px 0;
 }
 
-.6 {
+.num-6 {
 	width: 50px;
 	height: 70px;
 	background-position: -306px 0;
 }
 
-.7 {
+.num-7 {
 	width: 50px;
 	height: 70px;
 	background-position: -357px 0;
 }
 
-.8 {
+.num-8 {
 	width: 50px;
 	height: 70px;
 	background-position: -408px 0;
 }
 
-.9 {
+.num-9 {
 	width: 50px;
 	height: 70px;
 	background-position: -459px 0;
 }
 
-.0, .1, .2, .3, .4, .5, .6, .7, .8, .9 {
+.num-0, .num-1, .num-2, .num-3, .num-4, .num-5, .num-6, .num-7, .num-8, .num-9 {
 	background-size: 510px 71px;
 	background-repeat: no-repeat;
 	background-image: url("order-sprite.png");
 }
 
-.svg .0, .svg .1, .svg .2, .svg .3, .svg .4, .svg .5, .svg .6, .svg .7, .svg .8, .svg .9 {
+.svg .num-0, .svg .num-1, .svg .num-2, .svg .num-3, .svg .num-4, .svg .num-5, .svg .num-6, .svg .num-7, .svg .num-8, .svg .num-9 {
 	background-image: url("order-sprite.svg");
 }

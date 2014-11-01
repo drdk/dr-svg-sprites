@@ -78,7 +78,7 @@ module.exports = function (config, callback) {
 
 	// generate a usable prefix from a file object
 	function prefix(file) {
-		return path.basename(file.relative, ".svg").split(path.SEP).join("-");
+		return file.relative.replace(/\.svg$/, "").split(path.SEP).join("-");
 	}
 
 };

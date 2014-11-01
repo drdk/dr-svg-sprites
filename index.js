@@ -10,6 +10,7 @@
 
 module.exports = function (config, callback) {
 
+	var _ = require("lodash");
 	var path = require("path");
 	var async = require("async");
 	var vfs = require("vinyl-fs");
@@ -28,7 +29,11 @@ module.exports = function (config, callback) {
 	function build (sprite) {
 
 		return through.obj(function (file, encoding, callback) {
-			svgutil.parse(file.contents.toString(), sprite.config.svgo, function (err, data) {
+			var config = _.cloneDeep(sprite.config.svgo);
+			if (!config.plugins) config.plugins = [];
+			config.plugins.push({ cleanupIDs: { prefix: prefix(file) } });
+
+			svgutil.parse(file.contents.toString(), config, function (err, data) {
 				sprite.addItem(file.path, data.source, data.namespaces, data.width, data.height);
 				callback(null);
 			});
@@ -45,13 +50,13 @@ module.exports = function (config, callback) {
 					});
 				});
 			};
-			
+
 			if (sprite.cssPath) {
 				tasks.css = function (callback) {
 					buildCSS(sprite, callback);
 				};
 			}
-			
+
 			if (sprite.previewPath) {
 				tasks.preview = function (callback) {
 					buildPreview(sprite, callback);
@@ -66,9 +71,14 @@ module.exports = function (config, callback) {
 					}
 				}
 			);
-			
+
 		});
-		
+
+	}
+
+	// generate a usable prefix from a file object
+	function prefix(file) {
+		return path.basename(file.relative, ".svg").split(path.SEP).join("-");
 	}
 
 };

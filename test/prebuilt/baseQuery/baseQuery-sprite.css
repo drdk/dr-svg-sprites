@@ -1,13 +1,13 @@
-.square-small {
-	width: 13px;
-	height: 13px;
-	background-position: 0 0;
-}
-
 .circle-small {
 	width: 15px;
 	height: 15px;
-	background-position: -14px 0;
+	background-position: 0 0;
+}
+
+.square-small {
+	width: 13px;
+	height: 13px;
+	background-position: -16px 0;
 }
 
 .triangle-small {
@@ -16,7 +16,7 @@
 	background-position: -30px 0;
 }
 
-.square-small, .circle-small, .triangle-small {
+.circle-small, .square-small, .triangle-small {
 	background-size: 46px 16px;
 	background-repeat: no-repeat;
 	background-image: url("baseQuery-sprite-small.png");
@@ -24,16 +24,16 @@
 
 @media only screen and (orientation:portrait) and (min-width: 400px) {
 	
-	.square-small {
-		width: 26px;
-		height: 26px;
-		background-position: 0 0;
-	}
-	
 	.circle-small {
 		width: 30px;
 		height: 30px;
-		background-position: -28px 0;
+		background-position: 0 0;
+	}
+	
+	.square-small {
+		width: 26px;
+		height: 26px;
+		background-position: -32px 0;
 	}
 	
 	.triangle-small {
@@ -42,7 +42,7 @@
 		background-position: -60px 0;
 	}
 	
-	.square-small, .circle-small, .triangle-small {
+	.circle-small, .square-small, .triangle-small {
 		background-size: 92px 32px;
 	}
 
@@ -50,16 +50,16 @@
 
 @media only screen and (orientation:portrait) and (min-width: 640px) {
 	
-	.square-small {
-		width: 39px;
-		height: 39px;
-		background-position: 0 0;
-	}
-	
 	.circle-small {
 		width: 45px;
 		height: 45px;
-		background-position: -42px 0;
+		background-position: 0 0;
+	}
+	
+	.square-small {
+		width: 39px;
+		height: 39px;
+		background-position: -48px 0;
 	}
 	
 	.triangle-small {
@@ -68,7 +68,7 @@
 		background-position: -90px 0;
 	}
 	
-	.square-small, .circle-small, .triangle-small {
+	.circle-small, .square-small, .triangle-small {
 		background-size: 138px 48px;
 	}
 
@@ -76,16 +76,16 @@
 
 @media only screen and (orientation:portrait) and (min-width: 800px) {
 	
-	.square-small {
-		width: 52px;
-		height: 52px;
-		background-position: 0 0;
-	}
-	
 	.circle-small {
 		width: 60px;
 		height: 60px;
-		background-position: -56px 0;
+		background-position: 0 0;
+	}
+	
+	.square-small {
+		width: 52px;
+		height: 52px;
+		background-position: -64px 0;
 	}
 	
 	.triangle-small {
@@ -94,22 +94,22 @@
 		background-position: -120px 0;
 	}
 	
-	.square-small, .circle-small, .triangle-small {
+	.circle-small, .square-small, .triangle-small {
 		background-size: 184px 64px;
 	}
 
 }
 
-.square-medium {
-	width: 26px;
-	height: 26px;
-	background-position: 0 0;
-}
-
 .circle-medium {
 	width: 30px;
 	height: 30px;
-	background-position: -28px 0;
+	background-position: 0 0;
+}
+
+.square-medium {
+	width: 26px;
+	height: 26px;
+	background-position: -32px 0;
 }
 
 .triangle-medium {
@@ -118,7 +118,7 @@
 	background-position: -60px 0;
 }
 
-.square-medium, .circle-medium, .triangle-medium {
+.circle-medium, .square-medium, .triangle-medium {
 	background-size: 92px 32px;
 	background-repeat: no-repeat;
 	background-image: url("baseQuery-sprite-medium.png");
@@ -126,16 +126,16 @@
 
 @media only screen and (orientation:portrait) and (min-width: 400px) {
 	
-	.square-medium {
-		width: 39px;
-		height: 39px;
-		background-position: 0 0;
-	}
-	
 	.circle-medium {
 		width: 45px;
 		height: 45px;
-		background-position: -42px 0;
+		background-position: 0 0;
+	}
+	
+	.square-medium {
+		width: 39px;
+		height: 39px;
+		background-position: -48px 0;
 	}
 	
 	.triangle-medium {
@@ -144,7 +144,7 @@
 		background-position: -90px 0;
 	}
 	
-	.square-medium, .circle-medium, .triangle-medium {
+	.circle-medium, .square-medium, .triangle-medium {
 		background-size: 138px 48px;
 	}
 
@@ -152,16 +152,16 @@
 
 @media only screen and (orientation:portrait) and (min-width: 640px) {
 	
-	.square-medium {
-		width: 52px;
-		height: 52px;
-		background-position: 0 0;
-	}
-	
 	.circle-medium {
 		width: 60px;
 		height: 60px;
-		background-position: -56px 0;
+		background-position: 0 0;
+	}
+	
+	.square-medium {
+		width: 52px;
+		height: 52px;
+		background-position: -64px 0;
 	}
 	
 	.triangle-medium {
@@ -170,7 +170,7 @@
 		background-position: -120px 0;
 	}
 	
-	.square-medium, .circle-medium, .triangle-medium {
+	.circle-medium, .square-medium, .triangle-medium {
 		background-size: 184px 64px;
 	}
 
@@ -178,16 +178,16 @@
 
 @media only screen and (orientation:portrait) and (min-width: 800px) {
 	
-	.square-medium {
-		width: 65px;
-		height: 65px;
-		background-position: 0 0;
-	}
-	
 	.circle-medium {
 		width: 75px;
 		height: 75px;
-		background-position: -70px 0;
+		background-position: 0 0;
+	}
+	
+	.square-medium {
+		width: 65px;
+		height: 65px;
+		background-position: -80px 0;
 	}
 	
 	.triangle-medium {
@@ -196,12 +196,12 @@
 		background-position: -150px 0;
 	}
 	
-	.square-medium, .circle-medium, .triangle-medium {
+	.circle-medium, .square-medium, .triangle-medium {
 		background-size: 230px 80px;
 	}
 
 }
 
-.svg .square-small, .svg .circle-small, .svg .triangle-small, .svg .square-medium, .svg .circle-medium, .svg .triangle-medium {
+.svg .circle-small, .svg .square-small, .svg .triangle-small, .svg .circle-medium, .svg .square-medium, .svg .triangle-medium {
 	background-image: url("baseQuery-sprite.svg");
 }

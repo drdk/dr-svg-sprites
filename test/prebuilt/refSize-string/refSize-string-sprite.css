@@ -1,13 +1,13 @@
-.square-small {
-	width: 13px;
-	height: 13px;
-	background-position: 0 0;
-}
-
 .circle-small {
 	width: 15px;
 	height: 15px;
-	background-position: -14px 0;
+	background-position: 0 0;
+}
+
+.square-small {
+	width: 13px;
+	height: 13px;
+	background-position: -16px 0;
 }
 
 .triangle-small {
@@ -16,22 +16,22 @@
 	background-position: -30px 0;
 }
 
-.square-small, .circle-small, .triangle-small {
+.circle-small, .square-small, .triangle-small {
 	background-size: 46px 16px;
 	background-repeat: no-repeat;
 	background-image: url("refSize-string-sprite-small.png");
 }
 
-.square-medium {
-	width: 26px;
-	height: 26px;
-	background-position: 0 0;
-}
-
 .circle-medium {
 	width: 30px;
 	height: 30px;
-	background-position: -28px 0;
+	background-position: 0 0;
+}
+
+.square-medium {
+	width: 26px;
+	height: 26px;
+	background-position: -32px 0;
 }
 
 .triangle-medium {
@@ -40,22 +40,22 @@
 	background-position: -60px 0;
 }
 
-.square-medium, .circle-medium, .triangle-medium {
+.circle-medium, .square-medium, .triangle-medium {
 	background-size: 92px 32px;
 	background-repeat: no-repeat;
 	background-image: url("refSize-string-sprite-medium.png");
 }
 
-.square-large {
-	width: 39px;
-	height: 39px;
-	background-position: 0 0;
-}
-
 .circle-large {
 	width: 45px;
 	height: 45px;
-	background-position: -42px 0;
+	background-position: 0 0;
+}
+
+.square-large {
+	width: 39px;
+	height: 39px;
+	background-position: -48px 0;
 }
 
 .triangle-large {
@@ -64,12 +64,12 @@
 	background-position: -90px 0;
 }
 
-.square-large, .circle-large, .triangle-large {
+.circle-large, .square-large, .triangle-large {
 	background-size: 138px 48px;
 	background-repeat: no-repeat;
 	background-image: url("refSize-string-sprite-large.png");
 }
 
-.svg .square-small, .svg .circle-small, .svg .triangle-small, .svg .square-medium, .svg .circle-medium, .svg .triangle-medium, .svg .square-large, .svg .circle-large, .svg .triangle-large {
+.svg .circle-small, .svg .square-small, .svg .triangle-small, .svg .circle-medium, .svg .square-medium, .svg .triangle-medium, .svg .circle-large, .svg .square-large, .svg .triangle-large {
 	background-image: url("refSize-string-sprite.svg");
 }

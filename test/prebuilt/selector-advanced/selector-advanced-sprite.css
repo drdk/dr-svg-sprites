@@ -1,37 +1,37 @@
-button > .square {
-	width: 13px;
-	height: 13px;
-	background-position: 0 0;
-}
-
-button:active > .square {
-	width: 13px;
-	height: 13px;
-	background-position: -14px 0;
-}
-
-button:hover > .square {
-	width: 13px;
-	height: 13px;
-	background-position: -28px 0;
-}
-
 button > .circle {
 	width: 15px;
 	height: 15px;
-	background-position: -42px 0;
+	background-position: 0 0;
 }
 
 button:active > .circle {
 	width: 15px;
 	height: 15px;
-	background-position: -58px 0;
+	background-position: -16px 0;
 }
 
 button:hover > .circle {
 	width: 15px;
 	height: 15px;
-	background-position: -74px 0;
+	background-position: -32px 0;
+}
+
+button > .square {
+	width: 13px;
+	height: 13px;
+	background-position: -48px 0;
+}
+
+button:active > .square {
+	width: 13px;
+	height: 13px;
+	background-position: -62px 0;
+}
+
+button:hover > .square {
+	width: 13px;
+	height: 13px;
+	background-position: -76px 0;
 }
 
 button > .triangle {
@@ -52,46 +52,46 @@ button:hover > .triangle {
 	background-position: -122px 0;
 }
 
-button > .square, button:active > .square, button:hover > .square, button > .circle, button:active > .circle, button:hover > .circle, button > .triangle, button:active > .triangle, button:hover > .triangle {
+button > .circle, button:active > .circle, button:hover > .circle, button > .square, button:active > .square, button:hover > .square, button > .triangle, button:active > .triangle, button:hover > .triangle {
 	background-size: 138px 16px;
 	background-repeat: no-repeat;
 	background-image: url("selector-advanced-sprite-small.png");
 }
 
-button > .square {
-	width: 26px;
-	height: 26px;
-	background-position: 0 0;
-}
-
-button:active > .square {
-	width: 26px;
-	height: 26px;
-	background-position: -28px 0;
-}
-
-button:hover > .square {
-	width: 26px;
-	height: 26px;
-	background-position: -56px 0;
-}
-
 button > .circle {
 	width: 30px;
 	height: 30px;
-	background-position: -84px 0;
+	background-position: 0 0;
 }
 
 button:active > .circle {
 	width: 30px;
 	height: 30px;
-	background-position: -116px 0;
+	background-position: -32px 0;
 }
 
 button:hover > .circle {
 	width: 30px;
 	height: 30px;
-	background-position: -148px 0;
+	background-position: -64px 0;
+}
+
+button > .square {
+	width: 26px;
+	height: 26px;
+	background-position: -96px 0;
+}
+
+button:active > .square {
+	width: 26px;
+	height: 26px;
+	background-position: -124px 0;
+}
+
+button:hover > .square {
+	width: 26px;
+	height: 26px;
+	background-position: -152px 0;
 }
 
 button > .triangle {
@@ -112,12 +112,12 @@ button:hover > .triangle {
 	background-position: -244px 0;
 }
 
-button > .square, button:active > .square, button:hover > .square, button > .circle, button:active > .circle, button:hover > .circle, button > .triangle, button:active > .triangle, button:hover > .triangle {
+button > .circle, button:active > .circle, button:hover > .circle, button > .square, button:active > .square, button:hover > .square, button > .triangle, button:active > .triangle, button:hover > .triangle {
 	background-size: 276px 32px;
 	background-repeat: no-repeat;
 	background-image: url("selector-advanced-sprite-medium.png");
 }
 
-.svg button > .square, .svg button:active > .square, .svg button:hover > .square, .svg button > .circle, .svg button:active > .circle, .svg button:hover > .circle, .svg button > .triangle, .svg button:active > .triangle, .svg button:hover > .triangle, .svg button > .square, .svg button:active > .square, .svg button:hover > .square, .svg button > .circle, .svg button:active > .circle, .svg button:hover > .circle, .svg button > .triangle, .svg button:active > .triangle, .svg button:hover > .triangle {
+.svg button > .circle, .svg button:active > .circle, .svg button:hover > .circle, .svg button > .square, .svg button:active > .square, .svg button:hover > .square, .svg button > .triangle, .svg button:active > .triangle, .svg button:hover > .triangle, .svg button > .circle, .svg button:active > .circle, .svg button:hover > .circle, .svg button > .square, .svg button:active > .square, .svg button:hover > .square, .svg button > .triangle, .svg button:active > .triangle, .svg button:hover > .triangle {
 	background-image: url("selector-advanced-sprite.svg");
 }

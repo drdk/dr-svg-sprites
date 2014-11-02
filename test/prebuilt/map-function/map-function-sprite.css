@@ -4,24 +4,24 @@
 	background-position: 0 0;
 }
 
-.erauqs {
-	width: 26px;
+.elgnairt {
+	width: 30px;
 	height: 26px;
 	background-position: -35px 0;
 }
 
-.elgnairt {
-	width: 30px;
+.erauqs {
+	width: 26px;
 	height: 26px;
 	background-position: -70px 0;
 }
 
-.elcric, .erauqs, .elgnairt {
+.elcric, .elgnairt, .erauqs {
 	background-size: 105px 35px;
 	background-repeat: no-repeat;
 	background-image: url("map-function-sprite.png");
 }
 
-.svg .elcric, .svg .erauqs, .svg .elgnairt {
+.svg .elcric, .svg .elgnairt, .svg .erauqs {
 	background-image: url("map-function-sprite.svg");
 }

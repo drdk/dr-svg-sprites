@@ -1,4 +1,5 @@
 # dr-svg-sprites
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/drdk/dr-svg-sprites?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 > Create SVG sprites with PNG fallbacks at needed sizes
 

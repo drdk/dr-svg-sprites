@@ -210,12 +210,21 @@ The function is passed the following arguments:
 - `tokens`: An object containing tokens that you might want to use in the selector. The following keys will be exposed:
   - `prefix`: `options.prefix` if used.
   - `size`: If `options.sizes` is used this is the current label.
+  - `state`: `options.stateToken` if used.
 
-The default function returns a classname consisting of the svg element basenames (filename without extension) prepended with `options.prefix` if set and appended with a size label from `options.sizes` if used. E.g. filename: `foo`, prefix: `my`, size: `large` -> `.my-foo-large`.
+The default function returns a classname consisting of the svg element basenames (filename without extension) prepended with `options.prefix` if set and appended with a size label from `options.sizes` if used. `options.stateToken` is used to extract and append states to the selector. E.g. filename: `foo_hover`, prefix: `my`, size: `large`, state: `_` -> `.my-foo-large:hover`.
 
 This is what the default function looks like for reference:
 ```js
 		selector: function (filename, tokens) {
+			var state = "";
+			if (tokens.state) {
+				var index = filename.indexOf(tokens.state);
+				if (index > -1) {
+					state = ":" + filename.slice(index + tokens.state.length);
+					filename = filename.slice(0, index);
+				}
+			}
 			var parts = [filename];
 			if (tokens.prefix) {
 				parts.unshift(tokens.prefix);
@@ -223,9 +232,16 @@ This is what the default function looks like for reference:
 			if (tokens.size) {
 				parts.push(tokens.size);
 			}
-			return "." + parts.join("-");
+			return "." + parts.join("-") + state;
 		},
 ```
+
+#### options.stateToken
+Type: `String`
+Default value: `null`
+Optional
+
+Defines a token to extract selector states from filenames. See `options.selector`.
 
 #### options.template
 Type: `String`
@@ -403,17 +419,23 @@ svgAttributes: {
 
 ## Changelog
 
+### 0.9.21
+
+Features:
+
+* Added `options.stateToken` for simpler state handling.
+
 
 ### 0.9.15
 
-Changes
+Changes:
 
 * Using `npm shrinkwrap` to avoid surprises via dependencies.
 
 
 ### 0.9.14
 
-Changes
+Changes:
 
 * Added defaults for `options.svgo`.
 
@@ -425,7 +447,7 @@ Features:
 
 ### 0.9.10
 
-Changes
+Changes:
 
 * Added solutions for when `options.cssSvgPrefix` and `options.cssPngPrefix` are empty strings.
 

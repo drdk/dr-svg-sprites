@@ -123,6 +123,18 @@ module.exports = [
 		}
 	},
 
+	{
+		name: "stateToken",
+		spriteElementPath: "./test/source/img/shapes-with-state/*.svg",
+		previewPath: null,
+		stateToken: "_",
+		refSize: "medium",
+		sizes: {
+			small: [13],
+			medium: [26]
+		}
+	},
+
 	/*
 		template
 	*/

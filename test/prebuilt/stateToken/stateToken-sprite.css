@@ -1,0 +1,123 @@
+.circle-small {
+	width: 15px;
+	height: 15px;
+	background-position: 0 0;
+}
+
+.circle-small:active {
+	width: 15px;
+	height: 15px;
+	background-position: -16px 0;
+}
+
+.circle-small:hover {
+	width: 15px;
+	height: 15px;
+	background-position: -32px 0;
+}
+
+.square-small {
+	width: 13px;
+	height: 13px;
+	background-position: -48px 0;
+}
+
+.square-small:active {
+	width: 13px;
+	height: 13px;
+	background-position: -62px 0;
+}
+
+.square-small:hover {
+	width: 13px;
+	height: 13px;
+	background-position: -76px 0;
+}
+
+.triangle-small {
+	width: 15px;
+	height: 13px;
+	background-position: -90px 0;
+}
+
+.triangle-small:active {
+	width: 15px;
+	height: 13px;
+	background-position: -106px 0;
+}
+
+.triangle-small:hover {
+	width: 15px;
+	height: 13px;
+	background-position: -122px 0;
+}
+
+.circle-small, .circle-small:active, .circle-small:hover, .square-small, .square-small:active, .square-small:hover, .triangle-small, .triangle-small:active, .triangle-small:hover {
+	background-size: 138px 16px;
+	background-repeat: no-repeat;
+	background-image: url("stateToken-sprite-small.png");
+}
+
+.circle-medium {
+	width: 30px;
+	height: 30px;
+	background-position: 0 0;
+}
+
+.circle-medium:active {
+	width: 30px;
+	height: 30px;
+	background-position: -32px 0;
+}
+
+.circle-medium:hover {
+	width: 30px;
+	height: 30px;
+	background-position: -64px 0;
+}
+
+.square-medium {
+	width: 26px;
+	height: 26px;
+	background-position: -96px 0;
+}
+
+.square-medium:active {
+	width: 26px;
+	height: 26px;
+	background-position: -124px 0;
+}
+
+.square-medium:hover {
+	width: 26px;
+	height: 26px;
+	background-position: -152px 0;
+}
+
+.triangle-medium {
+	width: 30px;
+	height: 26px;
+	background-position: -180px 0;
+}
+
+.triangle-medium:active {
+	width: 30px;
+	height: 26px;
+	background-position: -212px 0;
+}
+
+.triangle-medium:hover {
+	width: 30px;
+	height: 26px;
+	background-position: -244px 0;
+}
+
+.circle-medium, .circle-medium:active, .circle-medium:hover, .square-medium, .square-medium:active, .square-medium:hover, .triangle-medium, .triangle-medium:active, .triangle-medium:hover {
+	background-size: 276px 32px;
+	background-repeat: no-repeat;
+	background-image: url("stateToken-sprite-medium.png");
+}
+
+.svg .circle-small, .svg .circle-small:active, .svg .circle-small:hover, .svg .square-small, .svg .square-small:active, .svg .square-small:hover, .svg .triangle-small, .svg .triangle-small:active, .svg .triangle-small:hover, .svg .circle-medium, .svg .circle-medium:active, .svg .circle-medium:hover, .svg .square-medium, .svg .square-medium:active, .svg .square-medium:hover, .svg .triangle-medium, .svg .triangle-medium:active, .svg .triangle-medium:hover {
+	background-image: url("stateToken-sprite.svg");
+}

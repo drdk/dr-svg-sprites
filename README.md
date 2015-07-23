@@ -419,6 +419,16 @@ svgAttributes: {
 
 ## Changelog
 
+### 0.9.30
+
+Fixed:
+
+* Bug: `Fatal error: Cannot read property 'x' of null` by updating `layout` dependency.
+
+Changes:
+
+* Updated dependencies.
+
 ### 0.9.21
 
 Features:

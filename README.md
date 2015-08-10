@@ -419,6 +419,16 @@ svgAttributes: {
 
 ## Changelog
 
+### 0.9.31
+
+Fixed:
+
+* Bug: Clipping of sprite elements due to incorrect interpretation of translate properties.
+
+Changes:
+
+* svgo dependency downgraded from 0.5.5 to 0.4.5.
+
 ### 0.9.30
 
 Fixed:

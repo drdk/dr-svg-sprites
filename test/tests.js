@@ -1,5 +1,5 @@
 module.exports = [
-	
+
 	{
 		name: "spriteElementPath-string"
 	},
@@ -133,6 +133,11 @@ module.exports = [
 			small: [13],
 			medium: [26]
 		}
+	},
+
+	{
+		name: "emptyCss",
+		spriteElementPath: "./test/source/img/noSvg/*.svg"
 	},
 
 	/*

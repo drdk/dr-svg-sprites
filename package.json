@@ -1,7 +1,7 @@
 {
   "name": "dr-svg-sprites",
   "description": "Create SVG sprites with PNG fallbacks at needed sizes",
-  "version": "0.9.32",
+  "version": "1.0.0",
   "homepage": "",
   "author": {
     "name": "rasmusfl0e",

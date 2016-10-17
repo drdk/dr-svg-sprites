@@ -18,7 +18,7 @@ module.exports = function (name, newPath, oldPath, callback) {
 	var glob = [path.join(newPath, name, "*"), "!" + path.join(newPath, name, "config.json")];
 
 	var changes = {};
-  
+
 	vfs.src(glob).pipe(through.obj(function (file, encoding, callback) {
 
 		var newFile = file.path;
@@ -63,12 +63,12 @@ module.exports = function (name, newPath, oldPath, callback) {
 							{
 								newFile: function (callback) {
 									fs.readFile(newFile, "utf-8", function (err, content) {
-										callback(null, content);
+										callback(null, content && content.replace(/\r\n/g, "\n"));
 									});
 								},
 								oldFile: function (callback) {
 									fs.readFile(oldFile, "utf-8", function (err, content) {
-										callback(null, content);
+										callback(null, content && content.replace(/\r\n/g, "\n"));
 									});
 								}
 							},
@@ -86,7 +86,7 @@ module.exports = function (name, newPath, oldPath, callback) {
 								callback(null);
 							}
 						);
-						break; 
+						break;
 				}
 			}
 			else {

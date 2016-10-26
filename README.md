@@ -423,8 +423,8 @@ svgAttributes: {
 
 Changes:
 
-* Now requires ES6 support (Node 5+).
-* Updated to svg2png@4.0.0.
+* Now requires ES6 support (Node 6+).
+* Updated all dependencies.
 
 ### 0.9.31
 

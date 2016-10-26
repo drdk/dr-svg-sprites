@@ -22,18 +22,18 @@
   ],
   "main": "index.js",
   "engines": {
-    "node": ">= 0.8.0"
+    "node": ">= 6.0.0"
   },
   "dependencies": {
-    "async": "^1.4.0",
+    "async": "^2.1.2",
     "handlebars": "^2.0.0",
     "layout": "2.2.0",
-    "lodash": "^3.1.0",
+    "lodash": "^4.16.4",
     "mkdirp": "^0.5.1",
     "svg2png": "^4.0.0",
-    "svgo": "^0.4.5",
-    "through2": "^2.0.0",
-    "vinyl-fs": "^1.0.0"
+    "svgo": "^0.7.1",
+    "through2": "^2.0.1",
+    "vinyl-fs": "^2.4.4"
   },
   "keywords": [
     "svg",
